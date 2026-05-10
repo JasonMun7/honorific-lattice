@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/fetch-tmdb-portraits.mjs --dry-run)",
+      "Bash(node scripts/fetch-tmdb-portraits.mjs)",
+      "Bash(curl -sI \"https://static.wikia.nocookie.net/studio-ghibli/images/c/c2/Chihiro_Ogino.png/revision/latest/scale-to-width-down/200\")",
+      "Bash(curl -sI -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36' https://static.wikia.nocookie.net/studio-ghibli/images/c/c2/Chihiro_Ogino.png/revision/latest)",
+      "Bash(curl -sI \"https://static.wikia.nocookie.net/studio-ghibli/images/c/c2/Chihiro_Ogino.png/revision/latest/scale-to-width-down/300\")",
+      "Bash(curl -s \"https://ghibli.fandom.com/api.php?action=query&titles=Chihiro&prop=pageimages&format=json&pithumbsize=300\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); pages=d['query']['pages']; p=list\\(pages.values\\(\\)\\)[0]; print\\(p.get\\('title'\\), p.get\\('thumbnail',{}\\).get\\('source','no image'\\)\\)\")",
+      "Bash(curl -s \"https://spiritedaway.fandom.com/api.php?action=query&titles=Chihiro&prop=pageimages&format=json&pithumbsize=300\")",
+      "Bash(node scripts/fetch-tmdb-portraits.mjs --force)"
+    ]
+  }
+}

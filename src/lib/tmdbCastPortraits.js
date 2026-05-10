@@ -6,26 +6,105 @@
 
 const TMDB_IMAGE_BASE = "https://image.tmdb.org/t/p/w185";
 
-/** Course film title → TMDB movie id (numeric string). Extend as you add films. */
+/**
+ * Course film title (must match node.film in filmData.json) → TMDB movie id.
+ * Animated films are intentionally excluded — TMDB returns voice-actor headshots,
+ * not character art. Spirited Away and Millennium Actress use curated Wikia URLs.
+ */
 const FILM_TITLE_TO_TMDB_ID = {
-  "Spirited Away": "129",
+  "Rashōmon": "548",
+  "I Was Born, But…": "28268",
+  "Late Spring": "20530",
+  "The Mourning Forest": "2010",
+  "Tampopo": "11830",
+  "Funeral Parade of Roses": "1556",
+  "House (Hausu)": "25623",
+  "Ringu": "2671",
+  "Kamome Diner": "25657",
+  "One Cut of the Dead": "513434",
 };
 
 /** Extra phrases to match TMDB `cast[].character` (English credits) to graph node ids. */
 const NODE_ID_MATCH_HINTS = {
-  NoFace: ["kaonashi", "no-face", "no face"],
-  RiverSpirit: ["river spirit", "stink spirit"],
-  ChihiroFather: ["akio", "chihiro's father", "chihiros father"],
-  ChihiroMother: ["yuko", "ichiyuko", "chihiro's mother", "chihiros mother"],
-  BandaiKaeru: ["bandai", "chicken"],
-  OtoriSama: ["otori", "duck"],
-  GoldCustomerSpirit: ["gold", "customer", "patron"],
-  SeaGhostGuest: ["slime", "sea ghost", "guest"],
-  BathhouseDoorman: ["doorman", "bridge", "gate"],
-  AssistantGreeter: ["greeter", "entry", "lobby"],
-  KitchenWorker: ["kitchen"],
-  BathhouseClerk: ["clerk", "corridor", "room staff"],
-  BoilerOiler: ["boiler", "oiler"],
+  // Rashōmon
+  rashomon_Tajomaru: ["tajomaru", "bandit"],
+  rashomon_Takehiro: ["takehiro", "samurai", "husband"],
+  rashomon_Masako: ["masako", "wife", "woman"],
+  rashomon_Woodcutter: ["woodcutter", "kichijiro"],
+  rashomon_Priest: ["priest", "monk"],
+  rashomon_Commoner: ["commoner"],
+
+  // I Was Born, But…
+  bornbut_Taro: ["taro", "older brother", "eldest son"],
+  bornbut_Jiro: ["jiro", "younger brother"],
+  bornbut_Father: ["father", "dad", "yoshi"],
+  bornbut_Mother: ["mother", "mom"],
+  bornbut_Teacher: ["teacher", "yamamoto"],
+  bornbut_BullyBossSon: ["boss", "son", "bully"],
+
+  // Late Spring
+  latespring_Noriko: ["noriko"],
+  latespring_Shukichi: ["shukichi", "father", "professor somiya"],
+  latespring_AuntMasa: ["masa", "aunt", "matchmaker"],
+  latespring_ProfessorHattori: ["hattori"],
+  latespring_MrsTaguchi: ["taguchi"],
+  latespring_MissMiwa: ["miwa", "aya"],
+
+  // The Mourning Forest
+  mourning_Machiko: ["machiko"],
+  mourning_Shigeki: ["shigeki"],
+  mourning_Nurse: ["nurse"],
+  mourning_NeighborFarmer: ["farmer", "neighbor"],
+  mourning_FuneralOfficiant: ["officiant", "funeral", "rite"],
+  mourning_ForestGuide: ["guide", "forest"],
+
+  // Tampopo
+  tampopo_Tampopo: ["tampopo"],
+  tampopo_Goro: ["goro"],
+  tampopo_Pisuken: ["pisuken", "gun", "pistolero"],
+  tampopo_Chu: ["chu", "ramen master", "sensei"],
+  tampopo_Shohei: ["shohei"],
+  tampopo_OilMerchant: ["oil merchant"],
+
+  // Funeral Parade of Roses
+  roses_Eddie: ["eddie"],
+  roses_Leda: ["leda"],
+  roses_Gonda: ["gonda", "boss"],
+  roses_Sabu: ["sabu", "lieutenant"],
+  roses_FilmDirector: ["director"],
+  roses_RiotPolice: ["police", "riot", "captain"],
+
+  // House (Hausu)
+  house_Gorgeous: ["gorgeous", "oshare"],
+  house_Auntie: ["auntie", "aunt", "oba"],
+  house_KungFu: ["kung fu", "kungfu"],
+  house_Fantasy: ["fantasy", "fanta"],
+  house_Prof: ["prof", "glasses"],
+  house_Mac: ["mac", "musician"],
+
+  // Ringu
+  ringu_Reiko: ["reiko", "asakawa"],
+  ringu_Ryuji: ["ryuji", "takayama"],
+  ringu_Yoichi: ["yoichi"],
+  ringu_Sadako: ["sadako", "yamamura", "ghost", "well"],
+  ringu_Okazaki: ["okazaki"],
+  ringu_Takashi: ["takashi", "grandfather"],
+
+  // Kamome Diner
+  kamome_Sachie: ["sachie", "harada", "owner"],
+  kamome_Midori: ["midori"],
+  kamome_Masako: ["masako"],
+  kamome_Matsushima: ["matsushima"],
+  kamome_RealEstate: ["real estate", "agent", "broker"],
+  kamome_Postman: ["postman", "mailman"],
+
+  // One Cut of the Dead
+  onecut_Takayuki: ["takayuki", "higuchi", "director"],
+  onecut_Chinatsu: ["chinatsu", "kawasumi"],
+  onecut_Ko: ["ko", "actor"],
+  onecut_Harumi: ["harumi"],
+  onecut_Mitsu: ["mitsu", "producer"],
+  onecut_ZombieHorde: ["zombie", "horde", "extras"],
 };
 
 let creditsCache = new Map();

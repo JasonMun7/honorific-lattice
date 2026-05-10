@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean:vite": "rm -rf node_modules/.vite"
+    "fetch:portraits": "node scripts/fetch-tmdb-portraits.mjs",
+    "fetch:portraits:force": "node scripts/fetch-tmdb-portraits.mjs --force",
+    "fetch:portraits:dry": "node scripts/fetch-tmdb-portraits.mjs --dry-run"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.8",
