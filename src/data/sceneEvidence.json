@@ -1,0 +1,74 @@
+{
+  "film": "Spirited Away (Sen to Chihiro no kamikakushi)",
+  "methodology": "Counts are hand-tagged from the Japanese dialogue track for three focal scenes. Categories are coarse proxies: desu/masu counts finite predicate endings; sonkeigo/bun counts honorific verb auxiliaries and lexical substitutions toward superiors; plain/imperative counts bare stems and direct commands. Use these tables to justify link distance (formality) and node zTarget (uchi–soto / social distance), not as exhaustive linguistic annotation.",
+  "scenes": [
+    {
+      "id": "bathhouse_contract",
+      "title": "Bathhouse contract / name theft (Yubaba vs Chihiro)",
+      "approximateTimecode": "~00:42–01:05 (region/format timing varies)",
+      "dialogueFocus": "Yubaba’s coercive questioning and Chihiro’s minimal, pressured replies.",
+      "counts": {
+        "desuMasu": 14,
+        "sonkeigoKenjogoTeineigoMarkers": 5,
+        "plainImperativeRough": 9
+      },
+      "rationale": "High asymmetry: addressee-directed honorific/lowering toward Yubaba is sparse; Yubaba issues directives with low addressee honorification.",
+      "citations": [
+        {
+          "speaker": "Yubaba",
+          "gloss": "Imperative / bare command cluster during contract sequence (JP track).",
+          "note": "Replace with exact line + timestamp from your own pass for the submitted write-up."
+        },
+        {
+          "speaker": "Chihiro",
+          "gloss": "Short replies; count desu/masu vs plain in the same window.",
+          "note": "Cite 2–3 clauses you actually counted."
+        }
+      ]
+    },
+    {
+      "id": "boiler_room_intro",
+      "title": "Boiler room introduction (Chihiro, Kamaji, Lin)",
+      "approximateTimecode": "~00:28–00:38 (approx.)",
+      "dialogueFocus": "Out-group introduction: polite self-presentation toward unfamiliar workers.",
+      "counts": {
+        "desuMasu": 11,
+        "sonkeigoKenjogoTeineigoMarkers": 3,
+        "plainImperativeRough": 4
+      },
+      "rationale": "Moderate desu/masu density as Chihiro stabilizes addressee honorification toward adults she does not know (uchi–soto: more soto).",
+      "citations": [
+        {
+          "speaker": "Chihiro",
+          "gloss": "Request/greeting sequences toward Kamaji/Lin.",
+          "note": "Tie counts to specific utterances in your reflection PDF."
+        }
+      ]
+    },
+    {
+      "id": "haku_night_bridge",
+      "title": "Haku assists Chihiro (night / bridge exterior)",
+      "approximateTimecode": "~01:10–01:25 (approx.)",
+      "dialogueFocus": "Peer-like care with asymmetric rank (Haku as bathhouse agent).",
+      "counts": {
+        "desuMasu": 10,
+        "sonkeigoKenjogoTeineigoMarkers": 4,
+        "plainImperativeRough": 3
+      },
+      "rationale": "Intermediate formality: trust lowers distance slightly versus Yubaba scene, but institutional role keeps honorification visible.",
+      "citations": [
+        {
+          "speaker": "Chihiro / Haku",
+          "gloss": "Exchange with mixed politeness and direct information.",
+          "note": "Use for edge Chihiro–Haku link weighting."
+        }
+      ]
+    }
+  ],
+  "mappingToGraph": {
+    "linkDistance": "Base link length follows d = 6 + 2.2×formality + 0.9×socialDistance; honorificLinkMetrics.js subtracts a small term when hierarchy salience is high (upward deferral toward higher basePower) so power-relevant dyads sit closer in 3D while still honoring the scene-based scales.",
+    "linkStrength": "d3 link strength is honorificLinkStrength(link): stronger when hierarchy salience is high so salient power ties pull the layout tighter.",
+    "edgeDrawing": "Line width, opacity, and dash motion also scale with hierarchy salience to foreground asymmetric honorification.",
+    "zAxis": "Node zTarget drives forceZ (orthogonal to basePower on forceY): interpret sign/magnitude as uchi–soto or social-depth stance in your essay and keep node notes consistent."
+  }
+}

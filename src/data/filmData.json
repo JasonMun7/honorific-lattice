@@ -1,0 +1,2201 @@
+{
+  "film": "Spirited Away",
+  "nodes": [
+    {
+      "id": "Chihiro",
+      "name": "Chihiro",
+      "film": "Spirited Away",
+      "basePower": 1,
+      "type": "human",
+      "role": "Protagonist / newcomer",
+      "zTarget": 2.5,
+      "notes": "Low institutional power; soto-facing polite baseline toward bathhouse adults."
+    },
+    {
+      "id": "Yubaba",
+      "name": "Yubaba",
+      "film": "Spirited Away",
+      "basePower": 10,
+      "type": "spirit-boss",
+      "role": "Bathhouse sovereign",
+      "zTarget": -4,
+      "notes": "Commands with minimal addressee honorification downward; receives maximal upward honorification."
+    },
+    {
+      "id": "Zeniba",
+      "name": "Zeniba",
+      "film": "Spirited Away",
+      "basePower": 9,
+      "type": "spirit-sage",
+      "role": "Swamp-bottom twin / counter-sovereign",
+      "zTarget": 2.2,
+      "notes": "High rank outside the bathhouse economy; warm plain speech with Chihiro."
+    },
+    {
+      "id": "Haku",
+      "name": "Haku",
+      "film": "Spirited Away",
+      "basePower": 7,
+      "type": "spirit-manager",
+      "role": "Agent / guide",
+      "zTarget": 0.5,
+      "notes": "Institutional middle; bridges Yubaba’s chain and guests."
+    },
+    {
+      "id": "RiverSpirit",
+      "name": "River Spirit",
+      "film": "Spirited Away",
+      "basePower": 6,
+      "type": "spirit-guest",
+      "role": "Stink Spirit / honored guest",
+      "zTarget": 0,
+      "notes": "Service register spikes during cleansing; gratitude lowers distance after."
+    },
+    {
+      "id": "Boh",
+      "name": "Boh",
+      "film": "Spirited Away",
+      "basePower": 6,
+      "type": "spirit-child",
+      "role": "Yubaba’s son",
+      "zTarget": -3,
+      "notes": "Protected uchi core; child register toward Yubaba."
+    },
+    {
+      "id": "NoFace",
+      "name": "No-Face",
+      "film": "Spirited Away",
+      "basePower": 5,
+      "type": "spirit-anomaly",
+      "role": "Mute mimic / consumer of courtesy",
+      "zTarget": 1.5,
+      "notes": "Echoes others’ honorific levels; unstable dyads."
+    },
+    {
+      "id": "Kamaji",
+      "name": "Kamaji",
+      "film": "Spirited Away",
+      "basePower": 4,
+      "type": "worker",
+      "role": "Boiler room operator",
+      "zTarget": 1.2,
+      "notes": "Gruff plain to juniors; polite buffer to Lin/Haku."
+    },
+    {
+      "id": "Foreman",
+      "name": "Aniyaku (foreman)",
+      "film": "Spirited Away",
+      "basePower": 4,
+      "type": "worker",
+      "role": "Bathhouse floor foreman",
+      "zTarget": 1.5,
+      "notes": "Middle management politeness grid."
+    },
+    {
+      "id": "Lin",
+      "name": "Lin",
+      "film": "Spirited Away",
+      "basePower": 3,
+      "type": "worker",
+      "role": "Bathhouse attendant",
+      "zTarget": 1.8,
+      "notes": "Peer-ish worker stance toward Chihiro with workplace distance."
+    },
+    {
+      "id": "Aogaeru",
+      "name": "Aogaeru",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Frog cashier / clerk",
+      "zTarget": 1.6,
+      "notes": "Front-desk keigo upward to supervisors; clipped toward peers."
+    },
+    {
+      "id": "Chichiyaku",
+      "name": "Chichiyaku",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Chicken-neck clerk",
+      "zTarget": 1.6,
+      "notes": "Parallel register to Aogaeru in Yubaba’s office chain."
+    },
+    {
+      "id": "Kashira",
+      "name": "Kashira (masks)",
+      "film": "Spirited Away",
+      "basePower": 3,
+      "type": "spirit-servant",
+      "role": "Yubaba’s hopping attendants",
+      "zTarget": -2.5,
+      "notes": "Nonhuman in-group of the sovereign suite."
+    },
+    {
+      "id": "BandaiKaeru",
+      "name": "Bandai-gaeru",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Counter / chickening spirit",
+      "zTarget": 1.7,
+      "notes": "Ritual workplace commands and responses."
+    },
+    {
+      "id": "RadishSpirit",
+      "name": "Ōshira-sama (radish)",
+      "film": "Spirited Away",
+      "basePower": 4,
+      "type": "spirit-guest",
+      "role": "Elevator guest / minor kami",
+      "zTarget": 0.8,
+      "notes": "Guest honorification from attendants; quiet replies."
+    },
+    {
+      "id": "OtoriSama",
+      "name": "Ōtori-sama",
+      "film": "Spirited Away",
+      "basePower": 3,
+      "type": "spirit-guest",
+      "role": "Duck-like guest spirit",
+      "zTarget": 1.1,
+      "notes": "Casual-guest politeness in public bath zones."
+    },
+    {
+      "id": "SootSprites",
+      "name": "Soot sprites",
+      "film": "Spirited Away",
+      "basePower": 1,
+      "type": "collective",
+      "role": "Kamaji’s helpers",
+      "zTarget": 2,
+      "notes": "Minimal speech; treated as labor mass, not interlocutors."
+    },
+    {
+      "id": "BoilerOiler",
+      "name": "Boiler oilers",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Assistants feeding furnaces",
+      "zTarget": 1.4,
+      "notes": "Commands from Kamaji; plain acknowledgments."
+    },
+    {
+      "id": "BathhouseClerk",
+      "name": "Floor clerk (generic)",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Corridor / room staff",
+      "zTarget": 1.5,
+      "notes": "Standard bathhouse desu/masu toward guests and up-chain."
+    },
+    {
+      "id": "GoldCustomerSpirit",
+      "name": "Gold-paying guest",
+      "film": "Spirited Away",
+      "basePower": 3,
+      "type": "spirit-guest",
+      "role": "Wealthy patron",
+      "zTarget": 0.3,
+      "notes": "Purchased deference from workers; transactional honorification."
+    },
+    {
+      "id": "KitchenWorker",
+      "name": "Kitchen staff",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "No-Face feast prep",
+      "zTarget": 1.6,
+      "notes": "Burst of upward honorification during feast chaos."
+    },
+    {
+      "id": "BathhouseDoorman",
+      "name": "Bridge / gate attendant",
+      "film": "Spirited Away",
+      "basePower": 3,
+      "type": "worker",
+      "role": "Night bridge figure",
+      "zTarget": 1.3,
+      "notes": "Boundary role: warns and redirects with terse politeness."
+    },
+    {
+      "id": "AssistantGreeter",
+      "name": "Entry greeter",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Lobby bowing staff",
+      "zTarget": 1.5,
+      "notes": "Maximal surface politeness to arriving guests."
+    },
+    {
+      "id": "SeaGhostGuest",
+      "name": "Slime / sea guest",
+      "film": "Spirited Away",
+      "basePower": 2,
+      "type": "spirit-guest",
+      "role": "Anonymous bath customer",
+      "zTarget": 1,
+      "notes": "Receives formulaic service register."
+    },
+    {
+      "id": "ChihiroFather",
+      "name": "Akio (father, pig)",
+      "film": "Spirited Away",
+      "basePower": 0.5,
+      "type": "transformed-human",
+      "role": "Chihiro’s father (cursed)",
+      "zTarget": 3,
+      "notes": "Agency collapse; not treated as honorific interlocutor."
+    },
+    {
+      "id": "ChihiroMother",
+      "name": "Yuko (mother, pig)",
+      "film": "Spirited Away",
+      "basePower": 0.5,
+      "type": "transformed-human",
+      "role": "Chihiro’s mother (cursed)",
+      "zTarget": 3,
+      "notes": "Same structural reduction as father."
+    },
+    {
+      "id": "spirited_NightShiftCaptain",
+      "name": "Night-shift captain",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 4,
+      "type": "worker",
+      "role": "After-hours floor lead",
+      "zTarget": 1.4,
+      "notes": "Compressed polite chain between Lin’s day crew and bathhouse night routines."
+    },
+    {
+      "id": "spirited_SeaRailConductor",
+      "name": "Sea-rail conductor",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 5,
+      "type": "spirit-functionary",
+      "role": "Silent train steward",
+      "zTarget": 0.5,
+      "notes": "Minimal honorific surface; institutional anonymity toward passengers."
+    },
+    {
+      "id": "spirited_PaperCharmCourier",
+      "name": "Paper-charm courier",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 3,
+      "type": "spirit-servant",
+      "role": "Shikigami-like messenger",
+      "zTarget": -1.2,
+      "notes": "High deferential chirps toward Yubaba’s office; clipped to peers."
+    },
+    {
+      "id": "spirited_TunnelKappa",
+      "name": "Tunnel toll kappa",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 3,
+      "type": "spirit-clerk",
+      "role": "Threshold fee spirit",
+      "zTarget": 1.9,
+      "notes": "Terse transactional politeness at the red gate tunnel."
+    },
+    {
+      "id": "spirited_ReturnDockClerk",
+      "name": "Return-dock clerk",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Departure pier paperwork",
+      "zTarget": 1.5,
+      "notes": "Formulaic desu/masu toward travelers leaving the spirit economy."
+    },
+    {
+      "id": "spirited_FeastBusser",
+      "name": "Feast busser",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 2,
+      "type": "worker",
+      "role": "No-Face banquet cleanup",
+      "zTarget": 1.7,
+      "notes": "Burst keigo upward during chaos; plain peer coordination sideways."
+    },
+    {
+      "id": "spirited_RiverbankKitsune",
+      "name": "Riverbank kitsune elder",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 6,
+      "type": "spirit-guest",
+      "role": "Shallow-water observer",
+      "zTarget": 0.9,
+      "notes": "Older guest register: soft honorifics from children, plain replies down."
+    },
+    {
+      "id": "spirited_BathhouseScribe",
+      "name": "Contract scribe",
+      "film": "Spirited Away",
+      "filmId": "spirited-away",
+      "basePower": 3,
+      "type": "worker",
+      "role": "Name-stealing paperwork assistant",
+      "zTarget": 1.2,
+      "notes": "Institutional keigo shell around Yubaba’s naming violence."
+    },
+    {
+      "id": "rashomon_Tajomaru",
+      "name": "Tajōmaru",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 7,
+      "type": "bandit",
+      "role": "Confessed outlaw",
+      "zTarget": 2.8,
+      "notes": "Rough plain brags; court testimony shifts register with audience."
+    },
+    {
+      "id": "rashomon_Takehiro",
+      "name": "Takehiro Samurai",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 5,
+      "type": "samurai",
+      "role": "Traveling husband",
+      "zTarget": 1.5,
+      "notes": "Honor-bound self-description under pressure."
+    },
+    {
+      "id": "rashomon_Masako",
+      "name": "Masako",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 4,
+      "type": "noblewoman",
+      "role": "Traveling wife",
+      "zTarget": 2.2,
+      "notes": "Polite veneer cracking into accusatory speech."
+    },
+    {
+      "id": "rashomon_Woodcutter",
+      "name": "Woodcutter",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 2,
+      "type": "commoner",
+      "role": "Gate narrator",
+      "zTarget": 1.8,
+      "notes": "Humble deferential frame to priest and commoner."
+    },
+    {
+      "id": "rashomon_Priest",
+      "name": "Traveling priest",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 5,
+      "type": "cleric",
+      "role": "Moral witness",
+      "zTarget": 1,
+      "notes": "Measured Buddhist-inflected politeness."
+    },
+    {
+      "id": "rashomon_Commoner",
+      "name": "Commoner",
+      "film": "Rashōmon",
+      "filmId": "rashomon",
+      "basePower": 3,
+      "type": "commoner",
+      "role": "Shelter-seeker",
+      "zTarget": 2,
+      "notes": "Blunt transactional talk; challenges woodcutter’s tale."
+    },
+    {
+      "id": "bornbut_Taro",
+      "name": "Taro",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 2,
+      "type": "child",
+      "role": "Older brother",
+      "zTarget": 1.5,
+      "notes": "Playground rough speech vs. polite mask toward adults."
+    },
+    {
+      "id": "bornbut_Jiro",
+      "name": "Jirō",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 2,
+      "type": "child",
+      "role": "Younger brother",
+      "zTarget": 1.6,
+      "notes": "Echoes Taro’s stance; bows when forced."
+    },
+    {
+      "id": "bornbut_Father",
+      "name": "Salaryman father",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 4,
+      "type": "salaryman",
+      "role": "Office father",
+      "zTarget": 1.2,
+      "notes": "Workplace hierarchy language brought home."
+    },
+    {
+      "id": "bornbut_Mother",
+      "name": "Mother",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 3,
+      "type": "homemaker",
+      "role": "Household anchor",
+      "zTarget": 1.4,
+      "notes": "Soft teineigo toward neighbors; plain to sons."
+    },
+    {
+      "id": "bornbut_Teacher",
+      "name": "Teacher Yamamoto",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 5,
+      "type": "teacher",
+      "role": "School authority",
+      "zTarget": 0.8,
+      "notes": "Institutional polite commands to pupils and parents."
+    },
+    {
+      "id": "bornbut_BullyBossSon",
+      "name": "Boss’s son",
+      "film": "I Was Born, But…",
+      "filmId": "born-but",
+      "basePower": 3,
+      "type": "child",
+      "role": "Privileged peer",
+      "zTarget": -0.5,
+      "notes": "Casual cruelty; parents’ rank backs his plain imperatives."
+    },
+    {
+      "id": "latespring_Noriko",
+      "name": "Noriko",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 3,
+      "type": "daughter",
+      "role": "Unmarried daughter",
+      "zTarget": 2,
+      "notes": "Deferential daughter speech toward father and matchmakers."
+    },
+    {
+      "id": "latespring_Shukichi",
+      "name": "Shūkichi",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 6,
+      "type": "father",
+      "role": "Professor widower",
+      "zTarget": 0.5,
+      "notes": "Warm plain at home; careful polite omissions about remarriage."
+    },
+    {
+      "id": "latespring_AuntMasa",
+      "name": "Aunt Masa",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 5,
+      "type": "relative",
+      "role": "Matchmaking aunt",
+      "zTarget": 1.2,
+      "notes": "Indirect keigo-heavy persuasion toward Noriko."
+    },
+    {
+      "id": "latespring_ProfessorHattori",
+      "name": "Professor Hattori",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 6,
+      "type": "academic",
+      "role": "Colleague / suitor’s father",
+      "zTarget": 0.7,
+      "notes": "Academic polite distance; careful honorifics in public."
+    },
+    {
+      "id": "latespring_MrsTaguchi",
+      "name": "Mrs Taguchi",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 4,
+      "type": "friend",
+      "role": "Father’s friend’s wife",
+      "zTarget": 1.5,
+      "notes": "Neighbor politeness; gossips gently."
+    },
+    {
+      "id": "latespring_MissMiwa",
+      "name": "Miss Miwa",
+      "film": "Late Spring",
+      "filmId": "late-spring",
+      "basePower": 3,
+      "type": "friend",
+      "role": "Noriko’s friend",
+      "zTarget": 1.8,
+      "notes": "Peer desu/masu; confessional plain in private."
+    },
+    {
+      "id": "mourning_Machiko",
+      "name": "Machiko",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 4,
+      "type": "caregiver",
+      "role": "Orchard widow",
+      "zTarget": 1.5,
+      "notes": "Soft rural politeness; grief thins honorific load."
+    },
+    {
+      "id": "mourning_Shigeki",
+      "name": "Shigeki",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 5,
+      "type": "caregiver",
+      "role": "Elder husband",
+      "zTarget": 1.2,
+      "notes": "Few words; plain gratitude to helpers."
+    },
+    {
+      "id": "mourning_Nurse",
+      "name": "Visiting nurse",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 3,
+      "type": "nurse",
+      "role": "Home nurse",
+      "zTarget": 1,
+      "notes": "Professional bedside teineigo."
+    },
+    {
+      "id": "mourning_NeighborFarmer",
+      "name": "Neighbor farmer",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 2,
+      "type": "farmer",
+      "role": "Adjacent landowner",
+      "zTarget": 1.7,
+      "notes": "Rough plain offers of labor and tea."
+    },
+    {
+      "id": "mourning_FuneralOfficiant",
+      "name": "Funeral officiant",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 5,
+      "type": "cleric",
+      "role": "Mountain rite leader",
+      "zTarget": 0.6,
+      "notes": "Liturgical polite frame; lowered speech to family."
+    },
+    {
+      "id": "mourning_ForestGuide",
+      "name": "Forest guide",
+      "film": "The Mourning Forest",
+      "filmId": "mourning-forest",
+      "basePower": 3,
+      "type": "worker",
+      "role": "Logging path guide",
+      "zTarget": 1.9,
+      "notes": "Terse practical speech; respectful distance to mourners."
+    },
+    {
+      "id": "millennium_Chiyoko",
+      "name": "Chiyoko Fujiwara",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 8,
+      "type": "actor",
+      "role": "Studio-era star",
+      "zTarget": -0.5,
+      "notes": "On-camera keigo archetypes; off-set guarded plain."
+    },
+    {
+      "id": "millennium_Genya",
+      "name": "Genya Tachibana",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 4,
+      "type": "documentarian",
+      "role": "TV crew lead",
+      "zTarget": 1.2,
+      "notes": "Fan-polite upward to Chiyoko; casual to crew."
+    },
+    {
+      "id": "millennium_Eiko",
+      "name": "Eiko Shimao",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 5,
+      "type": "actor",
+      "role": "Rival starlet",
+      "zTarget": 1,
+      "notes": "Competitive politeness; barbed honorifics in interviews."
+    },
+    {
+      "id": "millennium_Kyoji",
+      "name": "Kyōji Ida",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 6,
+      "type": "studio-boss",
+      "role": "Scout / producer",
+      "zTarget": 0.3,
+      "notes": "Paternalistic studio register toward talent."
+    },
+    {
+      "id": "millennium_Mino",
+      "name": "Mino",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 3,
+      "type": "assistant",
+      "role": "Key grip / driver",
+      "zTarget": 1.6,
+      "notes": "Workplace plain; polite spikes toward Genya."
+    },
+    {
+      "id": "millennium_Interviewer",
+      "name": "TV interviewer",
+      "film": "Millennium Actress",
+      "filmId": "millennium-actress",
+      "basePower": 4,
+      "type": "media",
+      "role": "Talk-show host",
+      "zTarget": 1.1,
+      "notes": "Broadcast-polite template questions."
+    },
+    {
+      "id": "tampopo_Tampopo",
+      "name": "Tampopo",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 4,
+      "type": "cook",
+      "role": "Ramen shop owner",
+      "zTarget": 1.5,
+      "notes": "Earnest learner register; polite to mentors."
+    },
+    {
+      "id": "tampopo_Goro",
+      "name": "Gorō",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 5,
+      "type": "trucker",
+      "role": "Truck-gun helper",
+      "zTarget": 1,
+      "notes": "Rough plain masculinity; respectful to Tampopo."
+    },
+    {
+      "id": "tampopo_Pisuken",
+      "name": "Pisuken",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 4,
+      "type": "contractor",
+      "role": "Noodle rival",
+      "zTarget": 1.3,
+      "notes": "Blustering sales talk; mock-polite challenges."
+    },
+    {
+      "id": "tampopo_Chu",
+      "name": "Chū",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 6,
+      "type": "sensei",
+      "role": "Ramen sensei",
+      "zTarget": -0.2,
+      "notes": "Master-to-student imperatives mixed with praise."
+    },
+    {
+      "id": "tampopo_Shohei",
+      "name": "Shōhei",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 3,
+      "type": "student",
+      "role": "Trainee cook",
+      "zTarget": 1.8,
+      "notes": "Student keigo toward sensei."
+    },
+    {
+      "id": "tampopo_OilMerchant",
+      "name": "Oil merchant",
+      "film": "Tampopo",
+      "filmId": "tampopo",
+      "basePower": 3,
+      "type": "vendor",
+      "role": "Market supplier",
+      "zTarget": 1.7,
+      "notes": "Transactional honorifics at loading dock."
+    },
+    {
+      "id": "roses_Eddie",
+      "name": "Eddie",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 5,
+      "type": "host",
+      "role": "Bar host",
+      "zTarget": 0.5,
+      "notes": "Camp in-group plain; theatrical politeness to marks."
+    },
+    {
+      "id": "roses_Leda",
+      "name": "Leda",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 4,
+      "type": "host",
+      "role": "Co-host",
+      "zTarget": 0.6,
+      "notes": "Peer plain with Eddie; flirty polite to customers."
+    },
+    {
+      "id": "roses_Gonda",
+      "name": "Gonda",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 6,
+      "type": "yakuza",
+      "role": "Gang boss",
+      "zTarget": -1,
+      "notes": "Rough imperative chain downward."
+    },
+    {
+      "id": "roses_Sabu",
+      "name": "Sabū",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 4,
+      "type": "yakuza",
+      "role": "Lieutenant",
+      "zTarget": 0.2,
+      "notes": "Blunt orders; occasional mock-deferential irony."
+    },
+    {
+      "id": "roses_FilmDirector",
+      "name": "Underground film director",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 5,
+      "type": "artist",
+      "role": "Meta-film voice",
+      "zTarget": 1.1,
+      "notes": "Brechtian asides; breaks fourth-wall politeness."
+    },
+    {
+      "id": "roses_RiotPolice",
+      "name": "Riot squad captain",
+      "film": "Funeral Parade of Roses",
+      "filmId": "funeral-parade-roses",
+      "basePower": 7,
+      "type": "police",
+      "role": "Street clearance",
+      "zTarget": -0.8,
+      "notes": "Command register; minimal honorifics to students."
+    },
+    {
+      "id": "house_Gorgeous",
+      "name": "Gorgeous",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 3,
+      "type": "schoolgirl",
+      "role": "Leader / narrator",
+      "zTarget": 1.5,
+      "notes": "Teasing plain among friends; polite mask to aunt."
+    },
+    {
+      "id": "house_Auntie",
+      "name": "Auntie",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 9,
+      "type": "supernatural",
+      "role": "Hungry house / aunt",
+      "zTarget": -3,
+      "notes": "Grotesque affection; predatory baby-talk."
+    },
+    {
+      "id": "house_KungFu",
+      "name": "Kung Fu",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 2,
+      "type": "schoolgirl",
+      "role": "Athletic friend",
+      "zTarget": 1.8,
+      "notes": "Slapstick bravado; honorific collapse under terror."
+    },
+    {
+      "id": "house_Fantasy",
+      "name": "Fantasy",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 2,
+      "type": "schoolgirl",
+      "role": "Dreamy friend",
+      "zTarget": 2,
+      "notes": "Soft polite fragments; dissociative speech."
+    },
+    {
+      "id": "house_Prof",
+      "name": "Prof",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 2,
+      "type": "schoolgirl",
+      "role": "Glasses / brains",
+      "zTarget": 1.6,
+      "notes": "Pseudo-rational explanations; polite to Gorgeous."
+    },
+    {
+      "id": "house_Mac",
+      "name": "Mac",
+      "film": "House (Hausu)",
+      "filmId": "house",
+      "basePower": 2,
+      "type": "schoolgirl",
+      "role": "Musician friend",
+      "zTarget": 1.7,
+      "notes": "Casual slang; polite panic spikes."
+    },
+    {
+      "id": "ringu_Reiko",
+      "name": "Reiko Asakawa",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 4,
+      "type": "journalist",
+      "role": "Investigative reporter",
+      "zTarget": 1.2,
+      "notes": "Professional polite interviews; maternal plain to Yoichi."
+    },
+    {
+      "id": "ringu_Ryuji",
+      "name": "Ryūji Takayama",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 5,
+      "type": "intellectual",
+      "role": "Ex-husband / scholar",
+      "zTarget": 0.9,
+      "notes": "Ironic teineigo masking contempt for occult."
+    },
+    {
+      "id": "ringu_Yoichi",
+      "name": "Yoichi Asakawa",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 1,
+      "type": "child",
+      "role": "Son",
+      "zTarget": 2.5,
+      "notes": "Minimal child speech; TV-affected polite fragments."
+    },
+    {
+      "id": "ringu_Sadako",
+      "name": "Sadako Yamamura",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 8,
+      "type": "apparition",
+      "role": "Well ghost",
+      "zTarget": -2,
+      "notes": "Silence as maximal threat; parasocial mimicry of callers."
+    },
+    {
+      "id": "ringu_Okazaki",
+      "name": "Okazaki",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 3,
+      "type": "colleague",
+      "role": "TV station colleague",
+      "zTarget": 1.4,
+      "notes": "Office banter; polite cover for fear."
+    },
+    {
+      "id": "ringu_Takashi",
+      "name": "Takashi Asakawa",
+      "film": "Ringu",
+      "filmId": "ringu",
+      "basePower": 3,
+      "type": "relative",
+      "role": "Yoichi’s grandfather",
+      "zTarget": 1.1,
+      "notes": "Rural elder plain; ritual warnings."
+    },
+    {
+      "id": "kamome_Sachie",
+      "name": "Sachie",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 5,
+      "type": "cook",
+      "role": "Diner owner in Helsinki",
+      "zTarget": 0.8,
+      "notes": "Warm service Japanese; code-switch politeness with Finns."
+    },
+    {
+      "id": "kamome_Midori",
+      "name": "Midori",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 4,
+      "type": "traveler",
+      "role": "Midlife wanderer",
+      "zTarget": 1.2,
+      "notes": "Homesick polite small talk."
+    },
+    {
+      "id": "kamome_Masako",
+      "name": "Masako",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 4,
+      "type": "traveler",
+      "role": "Cinnamon-roll pilgrim",
+      "zTarget": 1.3,
+      "notes": "Neighborly teineigo; gratitude spikes."
+    },
+    {
+      "id": "kamome_Matsushima",
+      "name": "Matsushima",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 3,
+      "type": "local",
+      "role": "Finnish regular",
+      "zTarget": 1.9,
+      "notes": "Minimal shared-language politeness gestures."
+    },
+    {
+      "id": "kamome_RealEstate",
+      "name": "Real estate agent",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 4,
+      "type": "broker",
+      "role": "Shop lease helper",
+      "zTarget": 1,
+      "notes": "Contractual polite forms."
+    },
+    {
+      "id": "kamome_Postman",
+      "name": "Postman",
+      "film": "Kamome Diner",
+      "filmId": "kamome-diner",
+      "basePower": 2,
+      "type": "worker",
+      "role": "Rural route carrier",
+      "zTarget": 1.8,
+      "notes": "Terse friendly plain."
+    },
+    {
+      "id": "onecut_Takayuki",
+      "name": "Takayuki Higuchi",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 4,
+      "type": "director",
+      "role": "Zombie-film director",
+      "zTarget": 0.5,
+      "notes": "On-set imperatives; apologetic keigo to funders."
+    },
+    {
+      "id": "onecut_Chinatsu",
+      "name": "Chinatsu Kawasumi",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 3,
+      "type": "actor",
+      "role": "Lead actress",
+      "zTarget": 1.2,
+      "notes": "Polite endurance under chaos."
+    },
+    {
+      "id": "onecut_Ko",
+      "name": "Ko",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 3,
+      "type": "actor",
+      "role": "Self-important star",
+      "zTarget": 0.8,
+      "notes": "Demands couched in mock-polite requests."
+    },
+    {
+      "id": "onecut_Harumi",
+      "name": "Harumi",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 2,
+      "type": "actor",
+      "role": "Former idol",
+      "zTarget": 1.5,
+      "notes": "Fan-service register vs. zombie screams."
+    },
+    {
+      "id": "onecut_Mitsu",
+      "name": "Mitsu",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 3,
+      "type": "producer",
+      "role": "AD / line producer",
+      "zTarget": 1,
+      "notes": "Panicked polite phone calls."
+    },
+    {
+      "id": "onecut_ZombieHorde",
+      "name": "Zombie extras (chorus)",
+      "film": "One Cut of the Dead",
+      "filmId": "one-cut-dead",
+      "basePower": 1,
+      "type": "collective",
+      "role": "Living dead mob",
+      "zTarget": 2.8,
+      "notes": "Grunts as anti-honorific noise floor."
+    }
+  ],
+  "links": [
+    {
+      "source": "Chihiro",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Sonkeigo-style deferral (directed up)",
+      "socialDistance": 4
+    },
+    {
+      "source": "Yubaba",
+      "target": "Chihiro",
+      "formality": 0,
+      "label": "Commanding / low addressee honorification",
+      "socialDistance": 4
+    },
+    {
+      "source": "Chihiro",
+      "target": "Zeniba",
+      "formality": 2,
+      "label": "Polite respect to outsider elder",
+      "socialDistance": 2
+    },
+    {
+      "source": "Zeniba",
+      "target": "Chihiro",
+      "formality": 0,
+      "label": "Warm plain speech / diminutive care",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "Zeniba",
+      "target": "Haku",
+      "formality": 2,
+      "label": "Magical-institutional alignment",
+      "socialDistance": 2
+    },
+    {
+      "source": "Haku",
+      "target": "Yubaba",
+      "formality": 2,
+      "label": "Institutional politeness upward",
+      "socialDistance": 2
+    },
+    {
+      "source": "Haku",
+      "target": "RiverSpirit",
+      "formality": 2,
+      "label": "Bathhouse protocol toward guest deity",
+      "socialDistance": 2
+    },
+    {
+      "source": "Chihiro",
+      "target": "RiverSpirit",
+      "formality": 3,
+      "label": "High honorification in service sequence",
+      "socialDistance": 3
+    },
+    {
+      "source": "RiverSpirit",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Gratitude / lowered plain after cleansing",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Chihiro",
+      "target": "Kamaji",
+      "formality": 2,
+      "label": "Polite out-group presentation",
+      "socialDistance": 3
+    },
+    {
+      "source": "Chihiro",
+      "target": "Haku",
+      "formality": 2,
+      "label": "Care asymmetry with trust",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Lin",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Workplace casual-polite",
+      "socialDistance": 2
+    },
+    {
+      "source": "Lin",
+      "target": "Foreman",
+      "formality": 2,
+      "label": "Upward workplace politeness",
+      "socialDistance": 2
+    },
+    {
+      "source": "Foreman",
+      "target": "Lin",
+      "formality": 1,
+      "label": "Directive / compressed polite",
+      "socialDistance": 2
+    },
+    {
+      "source": "Foreman",
+      "target": "Yubaba",
+      "formality": 2,
+      "label": "Institutional chain upward",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Yubaba",
+      "target": "Boh",
+      "formality": 0,
+      "label": "Mother-to-child directives",
+      "socialDistance": 2
+    },
+    {
+      "source": "Boh",
+      "target": "Yubaba",
+      "formality": 1,
+      "label": "Child appeals",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Chihiro",
+      "target": "NoFace",
+      "formality": 2,
+      "label": "Cautious polite to uncanny guest",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "NoFace",
+      "target": "Chihiro",
+      "formality": 0,
+      "label": "Mimicry / plain fragments",
+      "socialDistance": 3
+    },
+    {
+      "source": "NoFace",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Exaggerated upward honorification (feast)",
+      "socialDistance": 3
+    },
+    {
+      "source": "Yubaba",
+      "target": "NoFace",
+      "formality": 1,
+      "label": "Transactional commands",
+      "socialDistance": 3
+    },
+    {
+      "source": "Chihiro",
+      "target": "ChihiroFather",
+      "formality": 1,
+      "label": "Family plain under distress",
+      "socialDistance": 1
+    },
+    {
+      "source": "Chihiro",
+      "target": "ChihiroMother",
+      "formality": 1,
+      "label": "Family plain under distress",
+      "socialDistance": 1
+    },
+    {
+      "source": "Yubaba",
+      "target": "ChihiroFather",
+      "formality": 0,
+      "label": "Objectifying address to cursed pigs",
+      "socialDistance": 4
+    },
+    {
+      "source": "Yubaba",
+      "target": "ChihiroMother",
+      "formality": 0,
+      "label": "Objectifying address to cursed pigs",
+      "socialDistance": 4
+    },
+    {
+      "source": "Chihiro",
+      "target": "Aogaeru",
+      "formality": 2,
+      "label": "Polite child-to-institution clerk",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Aogaeru",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Clipped workplace reply",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Aogaeru",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Maximal upward honorification",
+      "socialDistance": 3
+    },
+    {
+      "source": "Yubaba",
+      "target": "Aogaeru",
+      "formality": 0,
+      "label": "Peremptory office speech",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Chichiyaku",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Parallel clerk upward keigo",
+      "socialDistance": 3
+    },
+    {
+      "source": "Yubaba",
+      "target": "Chichiyaku",
+      "formality": 0,
+      "label": "Commands / minimal reciprocity",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Chichiyaku",
+      "target": "Aogaeru",
+      "formality": 1,
+      "label": "Peer clerk plain",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Kashira",
+      "target": "Yubaba",
+      "formality": 2,
+      "label": "Servile deference noises / short honorifics",
+      "socialDistance": 2
+    },
+    {
+      "source": "Yubaba",
+      "target": "Kashira",
+      "formality": 0,
+      "label": "Domestic command register",
+      "socialDistance": 2
+    },
+    {
+      "source": "Kashira",
+      "target": "Boh",
+      "formality": 1,
+      "label": "Caretaker chatter to child-core",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "BandaiKaeru",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Ritual challenge / teasing plain",
+      "socialDistance": 2
+    },
+    {
+      "source": "Chihiro",
+      "target": "BandaiKaeru",
+      "formality": 2,
+      "label": "Polite refusal / request",
+      "socialDistance": 2
+    },
+    {
+      "source": "Lin",
+      "target": "RadishSpirit",
+      "formality": 2,
+      "label": "Guest-service desu/masu",
+      "socialDistance": 2
+    },
+    {
+      "source": "RadishSpirit",
+      "target": "Lin",
+      "formality": 1,
+      "label": "Soft acknowledgment",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "Chihiro",
+      "target": "RadishSpirit",
+      "formality": 2,
+      "label": "Polite assistance in elevator",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "Lin",
+      "target": "OtoriSama",
+      "formality": 2,
+      "label": "Standard guest honorification",
+      "socialDistance": 2
+    },
+    {
+      "source": "Foreman",
+      "target": "BathhouseClerk",
+      "formality": 1,
+      "label": "Floor directives",
+      "socialDistance": 2
+    },
+    {
+      "source": "BathhouseClerk",
+      "target": "Foreman",
+      "formality": 2,
+      "label": "Upward reporting politeness",
+      "socialDistance": 2
+    },
+    {
+      "source": "BathhouseClerk",
+      "target": "GoldCustomerSpirit",
+      "formality": 3,
+      "label": "High guest keigo (paid patron)",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "GoldCustomerSpirit",
+      "target": "BathhouseClerk",
+      "formality": 1,
+      "label": "Purchased casual authority",
+      "socialDistance": 2
+    },
+    {
+      "source": "Kamaji",
+      "target": "SootSprites",
+      "formality": 0,
+      "label": "Plain imperatives to labor mass",
+      "socialDistance": 2
+    },
+    {
+      "source": "SootSprites",
+      "target": "Kamaji",
+      "formality": 2,
+      "label": "Minimal polite acknowledgments",
+      "socialDistance": 2
+    },
+    {
+      "source": "Chihiro",
+      "target": "SootSprites",
+      "formality": 1,
+      "label": "Soft plain thanks (food gift)",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Kamaji",
+      "target": "BoilerOiler",
+      "formality": 0,
+      "label": "Boiler-room command chain",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "BoilerOiler",
+      "target": "Kamaji",
+      "formality": 2,
+      "label": "Short upward polite",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "Lin",
+      "target": "KitchenWorker",
+      "formality": 1,
+      "label": "Peer kitchen coordination",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "KitchenWorker",
+      "target": "NoFace",
+      "formality": 3,
+      "label": "Feast-scene exaggerated service keigo",
+      "socialDistance": 3
+    },
+    {
+      "source": "NoFace",
+      "target": "KitchenWorker",
+      "formality": 0,
+      "label": "Silent consumption / mimicry",
+      "socialDistance": 3
+    },
+    {
+      "source": "AssistantGreeter",
+      "target": "Chihiro",
+      "formality": 2,
+      "label": "Entry bow + polite address",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Chihiro",
+      "target": "AssistantGreeter",
+      "formality": 2,
+      "label": "Child polite reply",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "BathhouseDoorman",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Terse boundary warning",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Chihiro",
+      "target": "BathhouseDoorman",
+      "formality": 2,
+      "label": "Polite request to pass",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Haku",
+      "target": "BathhouseDoorman",
+      "formality": 1,
+      "label": "Institutional shorthand among staff",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "SeaGhostGuest",
+      "target": "Lin",
+      "formality": 2,
+      "label": "Guest request (formulaic)",
+      "socialDistance": 2
+    },
+    {
+      "source": "Lin",
+      "target": "SeaGhostGuest",
+      "formality": 2,
+      "label": "Service reply pattern",
+      "socialDistance": 2
+    },
+    {
+      "source": "Foreman",
+      "target": "Aogaeru",
+      "formality": 1,
+      "label": "Middle-management directives",
+      "socialDistance": 2
+    },
+    {
+      "source": "Foreman",
+      "target": "Chichiyaku",
+      "formality": 1,
+      "label": "Middle-management directives",
+      "socialDistance": 2
+    },
+    {
+      "source": "Yubaba",
+      "target": "Foreman",
+      "formality": 0,
+      "label": "Sovereign-to-floor commands",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Haku",
+      "target": "Lin",
+      "formality": 1,
+      "label": "Cross-department polite coordination",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "Lin",
+      "target": "Haku",
+      "formality": 2,
+      "label": "Respect to higher-ranked agent",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "Zeniba",
+      "target": "NoFace",
+      "formality": 0,
+      "label": "Plain magical containment speech",
+      "socialDistance": 2
+    },
+    {
+      "source": "Chihiro",
+      "target": "KitchenWorker",
+      "formality": 2,
+      "label": "Polite corridor address",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "RiverSpirit",
+      "target": "Haku",
+      "formality": 1,
+      "label": "Post-cleansing gratitude chain",
+      "socialDistance": 2
+    },
+    {
+      "source": "GoldCustomerSpirit",
+      "target": "Yubaba",
+      "formality": 2,
+      "label": "Patron leverage (polite but firm)",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Yubaba",
+      "target": "GoldCustomerSpirit",
+      "formality": 2,
+      "label": "Business-host register",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "spirited_NightShiftCaptain",
+      "target": "Lin",
+      "formality": 2,
+      "label": "Night handoff polite",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "Lin",
+      "target": "spirited_NightShiftCaptain",
+      "formality": 1,
+      "label": "Peer coordination",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "spirited_NightShiftCaptain",
+      "target": "Foreman",
+      "formality": 2,
+      "label": "Upward floor report",
+      "socialDistance": 2
+    },
+    {
+      "source": "spirited_SeaRailConductor",
+      "target": "Chihiro",
+      "formality": 1,
+      "label": "Silent ticket check",
+      "socialDistance": 2
+    },
+    {
+      "source": "Chihiro",
+      "target": "spirited_SeaRailConductor",
+      "formality": 2,
+      "label": "Child polite bow",
+      "socialDistance": 2
+    },
+    {
+      "source": "spirited_SeaRailConductor",
+      "target": "Zeniba",
+      "formality": 1,
+      "label": "Institutional neutrality",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "spirited_PaperCharmCourier",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Courier keigo burst",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "Yubaba",
+      "target": "spirited_PaperCharmCourier",
+      "formality": 0,
+      "label": "Dismissive command",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "spirited_PaperCharmCourier",
+      "target": "Haku",
+      "formality": 2,
+      "label": "Inter-staff polite",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "spirited_TunnelKappa",
+      "target": "Chihiro",
+      "formality": 2,
+      "label": "Toll polite challenge",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "Chihiro",
+      "target": "spirited_TunnelKappa",
+      "formality": 2,
+      "label": "Careful child reply",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "spirited_TunnelKappa",
+      "target": "BathhouseDoorman",
+      "formality": 1,
+      "label": "Boundary peer shorthand",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "spirited_ReturnDockClerk",
+      "target": "Haku",
+      "formality": 2,
+      "label": "Departure paperwork polite",
+      "socialDistance": 1.6
+    },
+    {
+      "source": "Haku",
+      "target": "spirited_ReturnDockClerk",
+      "formality": 1,
+      "label": "Agent instruction",
+      "socialDistance": 1.6
+    },
+    {
+      "source": "spirited_FeastBusser",
+      "target": "KitchenWorker",
+      "formality": 1,
+      "label": "Feast cleanup coordination",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "KitchenWorker",
+      "target": "spirited_FeastBusser",
+      "formality": 1,
+      "label": "Peer plain",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "spirited_FeastBusser",
+      "target": "NoFace",
+      "formality": 3,
+      "label": "Fear-polite upward",
+      "socialDistance": 2.8
+    },
+    {
+      "source": "spirited_RiverbankKitsune",
+      "target": "Lin",
+      "formality": 2,
+      "label": "Guest-service pattern",
+      "socialDistance": 2
+    },
+    {
+      "source": "Lin",
+      "target": "spirited_RiverbankKitsune",
+      "formality": 2,
+      "label": "Standard bath reply",
+      "socialDistance": 2
+    },
+    {
+      "source": "spirited_BathhouseScribe",
+      "target": "Yubaba",
+      "formality": 3,
+      "label": "Contract desk keigo",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "Yubaba",
+      "target": "spirited_BathhouseScribe",
+      "formality": 0,
+      "label": "Dictation tone",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "spirited_BathhouseScribe",
+      "target": "Aogaeru",
+      "formality": 1,
+      "label": "Clerk peer plain",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "rashomon_Tajomaru",
+      "target": "rashomon_Takehiro",
+      "formality": 0,
+      "label": "Violence / domination speech",
+      "socialDistance": 4
+    },
+    {
+      "source": "rashomon_Masako",
+      "target": "rashomon_Tajomaru",
+      "formality": 2,
+      "label": "Accusatory honorific collapse",
+      "socialDistance": 3.5
+    },
+    {
+      "source": "rashomon_Takehiro",
+      "target": "rashomon_Masako",
+      "formality": 1,
+      "label": "Shamed husband plain",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "rashomon_Woodcutter",
+      "target": "rashomon_Priest",
+      "formality": 2,
+      "label": "Humble deferential narration",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "rashomon_Priest",
+      "target": "rashomon_Woodcutter",
+      "formality": 2,
+      "label": "Listener encouragement",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "rashomon_Commoner",
+      "target": "rashomon_Woodcutter",
+      "formality": 1,
+      "label": "Skeptical challenge",
+      "socialDistance": 2
+    },
+    {
+      "source": "rashomon_Woodcutter",
+      "target": "rashomon_Commoner",
+      "formality": 2,
+      "label": "Defensive polite",
+      "socialDistance": 2
+    },
+    {
+      "source": "bornbut_Taro",
+      "target": "bornbut_Jiro",
+      "formality": 0,
+      "label": "Brother rough talk",
+      "socialDistance": 1
+    },
+    {
+      "source": "bornbut_Jiro",
+      "target": "bornbut_Taro",
+      "formality": 0,
+      "label": "Brother mimicry",
+      "socialDistance": 1
+    },
+    {
+      "source": "bornbut_Taro",
+      "target": "bornbut_Father",
+      "formality": 2,
+      "label": "Child-to-father polite mask",
+      "socialDistance": 2
+    },
+    {
+      "source": "bornbut_Father",
+      "target": "bornbut_Taro",
+      "formality": 1,
+      "label": "Paternal plain reprimand",
+      "socialDistance": 2
+    },
+    {
+      "source": "bornbut_Mother",
+      "target": "bornbut_Father",
+      "formality": 2,
+      "label": "Spousal indirect polite",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "bornbut_Teacher",
+      "target": "bornbut_Taro",
+      "formality": 2,
+      "label": "School authority teineigo",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "bornbut_BullyBossSon",
+      "target": "bornbut_Taro",
+      "formality": 0,
+      "label": "Status-backed teasing",
+      "socialDistance": 2.2
+    },
+    {
+      "source": "latespring_Noriko",
+      "target": "latespring_Shukichi",
+      "formality": 2,
+      "label": "Daughter deferential care",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "latespring_Shukichi",
+      "target": "latespring_Noriko",
+      "formality": 1,
+      "label": "Father warm plain",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "latespring_AuntMasa",
+      "target": "latespring_Noriko",
+      "formality": 3,
+      "label": "Matchmaking indirect keigo",
+      "socialDistance": 2
+    },
+    {
+      "source": "latespring_ProfessorHattori",
+      "target": "latespring_Shukichi",
+      "formality": 2,
+      "label": "Colleague polite negotiation",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "latespring_MrsTaguchi",
+      "target": "latespring_Noriko",
+      "formality": 2,
+      "label": "Neighbor gossip-polite",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "latespring_MissMiwa",
+      "target": "latespring_Noriko",
+      "formality": 1,
+      "label": "Peer confessional",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "mourning_Machiko",
+      "target": "mourning_Shigeki",
+      "formality": 1,
+      "label": "Spousal tenderness plain",
+      "socialDistance": 1
+    },
+    {
+      "source": "mourning_Shigeki",
+      "target": "mourning_Machiko",
+      "formality": 1,
+      "label": "Husband gratitude",
+      "socialDistance": 1
+    },
+    {
+      "source": "mourning_Nurse",
+      "target": "mourning_Machiko",
+      "formality": 2,
+      "label": "Care professional polite",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "mourning_NeighborFarmer",
+      "target": "mourning_Shigeki",
+      "formality": 1,
+      "label": "Neighbor labor offer",
+      "socialDistance": 1.7
+    },
+    {
+      "source": "mourning_FuneralOfficiant",
+      "target": "mourning_Machiko",
+      "formality": 2,
+      "label": "Ritual condolence register",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "mourning_ForestGuide",
+      "target": "mourning_Machiko",
+      "formality": 1,
+      "label": "Practical forest speech",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "millennium_Genya",
+      "target": "millennium_Chiyoko",
+      "formality": 3,
+      "label": "Fan-interviewer keigo",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "millennium_Chiyoko",
+      "target": "millennium_Genya",
+      "formality": 1,
+      "label": "Guarded star reply",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "millennium_Eiko",
+      "target": "millennium_Chiyoko",
+      "formality": 2,
+      "label": "Rival polite barbs",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "millennium_Kyoji",
+      "target": "millennium_Chiyoko",
+      "formality": 2,
+      "label": "Producer paternal politeness",
+      "socialDistance": 1.4
+    },
+    {
+      "source": "millennium_Mino",
+      "target": "millennium_Genya",
+      "formality": 1,
+      "label": "Crew blunt coordination",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "millennium_Interviewer",
+      "target": "millennium_Chiyoko",
+      "formality": 2,
+      "label": "Broadcast template polite",
+      "socialDistance": 1.6
+    },
+    {
+      "source": "tampopo_Goro",
+      "target": "tampopo_Tampopo",
+      "formality": 2,
+      "label": "Protective polite encouragement",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "tampopo_Tampopo",
+      "target": "tampopo_Chu",
+      "formality": 3,
+      "label": "Student reverence",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "tampopo_Chu",
+      "target": "tampopo_Tampopo",
+      "formality": 0,
+      "label": "Master imperative teaching",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "tampopo_Pisuken",
+      "target": "tampopo_Tampopo",
+      "formality": 1,
+      "label": "Rival bluster",
+      "socialDistance": 2
+    },
+    {
+      "source": "tampopo_Shohei",
+      "target": "tampopo_Chu",
+      "formality": 2,
+      "label": "Trainee keigo",
+      "socialDistance": 1.6
+    },
+    {
+      "source": "tampopo_OilMerchant",
+      "target": "tampopo_Tampopo",
+      "formality": 2,
+      "label": "Vendor transactional polite",
+      "socialDistance": 1.7
+    },
+    {
+      "source": "roses_Eddie",
+      "target": "roses_Leda",
+      "formality": 0,
+      "label": "In-group camp plain",
+      "socialDistance": 1
+    },
+    {
+      "source": "roses_Leda",
+      "target": "roses_Eddie",
+      "formality": 0,
+      "label": "In-group camp plain",
+      "socialDistance": 1
+    },
+    {
+      "source": "roses_Gonda",
+      "target": "roses_Eddie",
+      "formality": 0,
+      "label": "Yakuza intimidation",
+      "socialDistance": 3
+    },
+    {
+      "source": "roses_Sabu",
+      "target": "roses_Gonda",
+      "formality": 2,
+      "label": "Lieutenant deference",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "roses_FilmDirector",
+      "target": "roses_Eddie",
+      "formality": 1,
+      "label": "Meta commentary",
+      "socialDistance": 2
+    },
+    {
+      "source": "roses_RiotPolice",
+      "target": "roses_Eddie",
+      "formality": 0,
+      "label": "Street clearance command",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "house_Gorgeous",
+      "target": "house_Auntie",
+      "formality": 2,
+      "label": "Polite niece mask",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "house_Auntie",
+      "target": "house_Gorgeous",
+      "formality": 1,
+      "label": "Uncanny affectionate baby-talk",
+      "socialDistance": 2.5
+    },
+    {
+      "source": "house_Gorgeous",
+      "target": "house_KungFu",
+      "formality": 0,
+      "label": "Friend banter",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "house_KungFu",
+      "target": "house_Fantasy",
+      "formality": 0,
+      "label": "Panic peer plain",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "house_Fantasy",
+      "target": "house_Prof",
+      "formality": 1,
+      "label": "Soft mutual reassurance",
+      "socialDistance": 1.3
+    },
+    {
+      "source": "house_Prof",
+      "target": "house_Mac",
+      "formality": 0,
+      "label": "Rationalizing chatter",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "ringu_Reiko",
+      "target": "ringu_Yoichi",
+      "formality": 1,
+      "label": "Mother plain / care",
+      "socialDistance": 1
+    },
+    {
+      "source": "ringu_Ryuji",
+      "target": "ringu_Reiko",
+      "formality": 2,
+      "label": "Ex-spouse ironic polite",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "ringu_Reiko",
+      "target": "ringu_Ryuji",
+      "formality": 2,
+      "label": "Professional distance polite",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "ringu_Sadako",
+      "target": "ringu_Reiko",
+      "formality": 0,
+      "label": "Parasocial threat (non-reply)",
+      "socialDistance": 4
+    },
+    {
+      "source": "ringu_Reiko",
+      "target": "ringu_Okazaki",
+      "formality": 2,
+      "label": "Office colleague polite",
+      "socialDistance": 1.4
+    },
+    {
+      "source": "ringu_Takashi",
+      "target": "ringu_Yoichi",
+      "formality": 1,
+      "label": "Grandfather gentle plain",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "kamome_Sachie",
+      "target": "kamome_Midori",
+      "formality": 2,
+      "label": "Host-customer warmth",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "kamome_Midori",
+      "target": "kamome_Masako",
+      "formality": 1,
+      "label": "Traveler peer polite",
+      "socialDistance": 1.3
+    },
+    {
+      "source": "kamome_Masako",
+      "target": "kamome_Sachie",
+      "formality": 3,
+      "label": "Gratitude keigo",
+      "socialDistance": 1.1
+    },
+    {
+      "source": "kamome_Matsushima",
+      "target": "kamome_Sachie",
+      "formality": 2,
+      "label": "Cross-language gesture-polite",
+      "socialDistance": 1.8
+    },
+    {
+      "source": "kamome_RealEstate",
+      "target": "kamome_Sachie",
+      "formality": 2,
+      "label": "Lease transactional polite",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "kamome_Postman",
+      "target": "kamome_Sachie",
+      "formality": 1,
+      "label": "Neighborly plain",
+      "socialDistance": 1.6
+    },
+    {
+      "source": "onecut_Takayuki",
+      "target": "onecut_Chinatsu",
+      "formality": 0,
+      "label": "On-set bark / praise",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "onecut_Chinatsu",
+      "target": "onecut_Takayuki",
+      "formality": 2,
+      "label": "Actor polite pushback",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "onecut_Ko",
+      "target": "onecut_Takayuki",
+      "formality": 1,
+      "label": "Star demands",
+      "socialDistance": 1.4
+    },
+    {
+      "source": "onecut_Harumi",
+      "target": "onecut_Chinatsu",
+      "formality": 1,
+      "label": "Co-star peer talk",
+      "socialDistance": 1.5
+    },
+    {
+      "source": "onecut_Mitsu",
+      "target": "onecut_Takayuki",
+      "formality": 2,
+      "label": "Producer panic polite",
+      "socialDistance": 1.2
+    },
+    {
+      "source": "onecut_ZombieHorde",
+      "target": "onecut_Takayuki",
+      "formality": 0,
+      "label": "Chorus groan (anti-speech)",
+      "socialDistance": 2.5
+    }
+  ]
+}

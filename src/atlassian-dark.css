@@ -1,0 +1,48 @@
+/**
+ * Atlassian Design System — Dark theme color tokens (hex values).
+ * Source: https://atlassian.design/foundations/color
+ * Values mirror `node_modules/@atlaskit/tokens/figma/atlassian-dark.json` (tokens package @atlaskit/tokens@13).
+ * Semantic roles: https://atlassian.design/foundations/color#color-roles
+ */
+:root {
+  /* Surfaces (elevation) */
+  --ads-elevation-surface: #1f1f21;
+  --ads-elevation-surface-overlay: #2b2c2f;
+  /* Panel over 3D: translucent overlay surface */
+  --ads-elevation-surface-overlay-a88: color-mix(
+    in srgb,
+    var(--ads-elevation-surface-overlay) 88%,
+    transparent
+  );
+  --ads-elevation-surface-raised: #242528;
+  --ads-elevation-surface-sunken: #18191a;
+
+  /* Text */
+  --ads-color-text: #cecfd2;
+  --ads-color-text-subtle: #a9abaf;
+  --ads-color-text-subtlest: #96999e;
+  --ads-color-text-accent-teal: #9dd9ee;
+  --ads-color-text-accent-teal-bolder: #c6edfb;
+  --ads-color-text-accent-yellow-bolder: #f5e989;
+  --ads-color-text-selected: #669df1;
+
+  /* Borders */
+  --ads-color-border: #e3e4f21f;
+  --ads-color-border-bold: #7e8188;
+  --ads-color-border-selected: #669df1;
+
+  /* Icons & brand / information (UI emphasis) */
+  --ads-color-icon-information: #4688ec;
+  --ads-color-icon-brand: #669df1;
+  --ads-color-icon-accent-teal: #42b2d7;
+  --ads-color-icon-accent-red: #e2483d;
+  --ads-color-icon-accent-gray: #7e8188;
+
+  /* Data visualization (charts) — for graph encoding without misusing danger/success roles */
+  --ads-color-chart-categorical-1: #4688ec;
+  --ads-color-chart-categorical-2: #94c748;
+  --ads-color-chart-categorical-4: #fca700;
+
+  /* Interaction / overlay */
+  --ads-color-blanket: #10121499;
+}

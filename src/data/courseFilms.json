@@ -1,0 +1,125 @@
+[
+  {
+    "id": "rashomon",
+    "title": "Rashōmon",
+    "titleDisplay": "Rashōmon",
+    "year": 1950,
+    "week": 2,
+    "poster": "/posters/rashomon.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rashomon",
+    "graphSource": true
+  },
+  {
+    "id": "born-but",
+    "title": "I Was Born, But...",
+    "titleDisplay": "I Was Born, But…",
+    "year": 1932,
+    "week": 3,
+    "poster": "/posters/born-but.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/I_Was_Born,_But...",
+    "graphSource": true
+  },
+  {
+    "id": "late-spring",
+    "title": "Late Spring",
+    "titleDisplay": "Late Spring",
+    "year": 1949,
+    "week": 4,
+    "poster": "/posters/late-spring.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Late_Spring",
+    "graphSource": true
+  },
+  {
+    "id": "mourning-forest",
+    "title": "The Mourning Forest",
+    "titleDisplay": "The Mourning Forest",
+    "year": 2007,
+    "week": 5,
+    "poster": "/posters/mourning-forest.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Mourning_Forest",
+    "graphSource": true
+  },
+  {
+    "id": "millennium-actress",
+    "title": "Millennium Actress",
+    "titleDisplay": "Millennium Actress",
+    "year": 2001,
+    "week": 6,
+    "poster": "/posters/millennium-actress.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Millennium_Actress",
+    "graphSource": true
+  },
+  {
+    "id": "tampopo",
+    "title": "Tampopo",
+    "titleDisplay": "Tampopo",
+    "year": 1985,
+    "week": 7,
+    "poster": "/posters/tampopo.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tampopo",
+    "graphSource": true
+  },
+  {
+    "id": "funeral-parade-roses",
+    "title": "Funeral Parade of Roses",
+    "titleDisplay": "Funeral Parade of Roses",
+    "year": 1969,
+    "week": 8,
+    "poster": "/posters/funeral-parade-roses.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Funeral_Parade_of_Roses",
+    "graphSource": true
+  },
+  {
+    "id": "house",
+    "title": "House",
+    "titleDisplay": "House (Hausu)",
+    "year": 1977,
+    "week": 9,
+    "poster": "/posters/house.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/House_(1977_film)",
+    "graphSource": true
+  },
+  {
+    "id": "ringu",
+    "title": "Ring",
+    "titleDisplay": "Ringu",
+    "year": 1998,
+    "week": 10,
+    "poster": "/posters/ringu.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ring_(1998_film)",
+    "note": "Course week titled “Ringu”; English Wikipedia article is Ring (1998 film).",
+    "graphSource": true
+  },
+  {
+    "id": "kamome-diner",
+    "title": "Kamome Diner",
+    "titleDisplay": "Kamome Diner",
+    "year": 2006,
+    "week": 11,
+    "weekEnd": 12,
+    "poster": "/posters/kamome-diner.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Kamome_Diner",
+    "graphSource": true
+  },
+  {
+    "id": "spirited-away",
+    "title": "Spirited Away",
+    "titleDisplay": "Spirited Away",
+    "year": 2001,
+    "week": 13,
+    "poster": "/posters/spirited-away.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Spirited_Away",
+    "note": "Honorific lattice graph is coded from this film.",
+    "graphSource": true
+  },
+  {
+    "id": "one-cut-dead",
+    "title": "One Cut of the Dead",
+    "titleDisplay": "One Cut of the Dead",
+    "year": 2017,
+    "week": 14,
+    "poster": "/posters/one-cut-dead.jpg",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/One_Cut_of_the_Dead",
+    "graphSource": true
+  }
+]
