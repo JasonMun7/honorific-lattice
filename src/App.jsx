@@ -28,6 +28,9 @@ export default function App() {
   const [methodologyTab, setMethodologyTab] = useState("method");
   /** Bumps when the graph should frame the whole layout. Starts at 1 so first paint matches Full graph zoom. */
   const [fullGraphOverviewNonce, setFullGraphOverviewNonce] = useState(1);
+  const [yStrength, setYStrength] = useState(0.55);
+  const [yLocked, setYLocked] = useState(false);
+  const [zLocked, setZLocked] = useState(false);
 
   const filteredGraph = useMemo(
     () =>
@@ -209,6 +212,12 @@ export default function App() {
         methodologyTab={methodologyTab}
         onMethodologyTabChange={setMethodologyTab}
         sceneEvidence={sceneEvidence}
+        yStrength={yStrength}
+        onYStrengthChange={setYStrength}
+        yLocked={yLocked}
+        onYLockedChange={setYLocked}
+        zLocked={zLocked}
+        onZLockedChange={setZLocked}
         onToggleFilmId={toggleFilmId}
         onClearFilmFilter={clearFilmFilter}
         onPickCharacter={pickNode}
@@ -250,6 +259,19 @@ export default function App() {
         </div>
       ) : null}
 
+      <div className="pointer-events-none fixed bottom-4 left-4 z-[60] rounded-md border border-ads-border/50 bg-ads-surface-overlay/80 px-3 py-2 text-[11px] leading-relaxed text-ads-text-subtle backdrop-blur-sm">
+        <p className="mb-1 text-[9px] font-semibold uppercase tracking-widest text-ads-text-subtlest">
+          Axes
+        </p>
+        <p>
+          <span className="font-semibold text-ads-text">Y ↕</span>{" "}
+          basePower — rank
+        </p>
+        <p className="text-ads-text-subtlest">
+          Z depth — see indicator below graph
+        </p>
+      </div>
+
       <Canvas
         gl={canvasGl}
         dpr={canvasDpr}
@@ -262,6 +284,9 @@ export default function App() {
           focusNodeId={selected?.id ?? null}
           fullGraphOverviewNonce={fullGraphOverviewNonce}
           onSelectNode={(node) => selectNodeById(node.id)}
+          yStrength={yStrength}
+          yLocked={yLocked}
+          zLocked={zLocked}
         />
       </Canvas>
     </div>

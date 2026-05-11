@@ -18,7 +18,7 @@ const TABS = [
  *
  * @param {{ tab: string; onTabChange: (id: string) => void; sceneEvidence: object }} props
  */
-export default function MethodologyPanelBody({ tab, onTabChange, sceneEvidence }) {
+export default function MethodologyPanelBody({ tab, onTabChange, sceneEvidence, yStrength = 0.55, onYStrengthChange, yLocked = false, onYLockedChange, zLocked = false, onZLockedChange }) {
   const tabBtn =
     "rounded-md px-panel-tight py-2.5 text-xs font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ads-border-selected";
 
@@ -52,7 +52,16 @@ export default function MethodologyPanelBody({ tab, onTabChange, sceneEvidence }
         ))}
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto px-panel py-4 text-panel-body text-ads-text-subtle">
-        {tab === "method" ? <MethodTab /> : null}
+        {tab === "method" ? (
+          <MethodTab
+            yStrength={yStrength}
+            onYStrengthChange={onYStrengthChange}
+            yLocked={yLocked}
+            onYLockedChange={onYLockedChange}
+            zLocked={zLocked}
+            onZLockedChange={onZLockedChange}
+          />
+        ) : null}
         {tab === "legend" ? <LegendTab /> : null}
         {tab === "evidence" ? <EvidenceTab sceneEvidence={sceneEvidence} /> : null}
       </div>
@@ -60,7 +69,7 @@ export default function MethodologyPanelBody({ tab, onTabChange, sceneEvidence }
   );
 }
 
-function MethodTab() {
+function MethodTab({ yStrength, onYStrengthChange, yLocked, onYLockedChange, zLocked, onZLockedChange }) {
   return (
     <div className="space-y-section leading-relaxed">
       <p className="text-ads-text">
@@ -74,13 +83,17 @@ function MethodTab() {
           Corpus → directed pairs
         </h3>
         <p>
-          We hand-tag short windows on the <strong>Japanese dialogue track</strong> and
-          record coarse counts: <strong>desu/masu</strong> predicates, clusters of{" "}
-          <strong>sonkeigo / kenjōgo / teineigo</strong> toward superiors or out-group
-          addressees, and <strong>plain / imperative / rough</strong> forms. Each{" "}
-          <strong>directed edge</strong> in the graph stands for an interpretive summary
-          of stance from speaker A toward addressee/reference B (often inferred from
-          adjacency in a scene, not only explicit vocatives).
+          For <strong>Spirited Away</strong>, the full Japanese script is tagged by
+          speaker and addressee. Polite-marker counts per line — weighted{" "}
+          <strong>ございます ×3, sonkeigo/kenjōgo verbs ×2, ます ×1, です ×0.5</strong> —
+          are averaged over each directed dyad. The 95th-percentile raw score sets the
+          ceiling, normalizing to a <strong>0–3 formality scale</strong>.{" "}
+          <strong>Social distance</strong> is derived from both directions:{" "}
+          <code className="text-ads-text">max(f, f_rev)×0.70 + max(0, f−f_rev)×0.60 + 1</code>,
+          clamped to 1–4. Group-addressed lines are decomposed to each named member.
+          For <strong>other films</strong>, each directed edge is an interpretive summary
+          of stance from speaker A toward addressee B, inferred from scene evidence and
+          defended in prose.
         </p>
       </section>
       <section>
@@ -94,8 +107,8 @@ function MethodTab() {
           <strong className="text-ads-text">Social distance</strong> encodes{" "}
           <strong>affective or institutional stretch</strong>—how “hard” the relationship
           feels to maintain politely (stranger danger, sovereign terror, feast chaos,
-          etc.). Both are qualitative judgments you defend in prose against the scene
-          evidence.
+          etc.). For Spirited Away both values are corpus-derived; for other films
+          they are qualitative judgments defended against scene evidence.
         </p>
         <p className="mt-2">
           The 3D layout also uses a derived{" "}
@@ -113,20 +126,73 @@ function MethodTab() {
         <p>
           The simulation sets resting link distance to{" "}
           <span className="whitespace-nowrap font-medium text-ads-text">
-            6 + 2.2×<em>f</em> + 0.9×<em>sd</em>
+            max(4.2, 6 + 2.2×<em>f</em> + 0.9×<em>sd</em> − 2.6×<em>hi</em>)
           </span>{" "}
-          where <em>f</em> is honorific formality and <em>sd</em> is social distance on that
-          edge. Higher values → <strong>longer edges</strong>, so tense or deferential
-          dyads can drift apart unless other forces pull them together.
+          where <em>f</em> is honorific formality, <em>sd</em> is social distance, and{" "}
+          <em>hi</em> is hierarchy salience on that edge. Higher formality or social
+          distance → <strong>longer edges</strong>; stronger hierarchy salience{" "}
+          <strong>shortens</strong> the spring, drawing deferential dyads slightly
+          closer so rank alignment is visible in space.
         </p>
+        {onYStrengthChange ? (
+          <div className="mt-3 rounded-md border border-ads-border/60 bg-ads-surface-sunken px-3 py-2.5">
+            <div className={`mb-2 flex items-center justify-between text-xs ${yLocked ? "opacity-40" : ""}`}>
+              <span className="text-ads-text-subtle">Y spring strength</span>
+              <span className="font-mono text-ads-text">{yStrength.toFixed(2)}</span>
+            </div>
+            <input
+              type="range"
+              min={0}
+              max={1}
+              step={0.05}
+              value={yStrength}
+              disabled={yLocked}
+              onChange={(e) => onYStrengthChange(Number(e.target.value))}
+              className={`w-full accent-blue-500 ${yLocked ? "cursor-not-allowed opacity-40" : "cursor-pointer"}`}
+            />
+            <div className={`mt-1.5 flex justify-between text-[10px] text-ads-text-subtlest ${yLocked ? "opacity-40" : ""}`}>
+              <span>0 — free float</span>
+              <span>0.55 — default</span>
+              <span>1 — strongest spring</span>
+            </div>
+            <div className="mt-2.5 space-y-2">
+              {onYLockedChange ? (
+                <label className="flex cursor-pointer items-center gap-2 text-xs text-ads-text-subtle">
+                  <input
+                    type="checkbox"
+                    checked={yLocked}
+                    onChange={(e) => onYLockedChange(e.target.checked)}
+                    className="accent-blue-500"
+                  />
+                  Hard-lock Y to basePower (overrides spring)
+                </label>
+              ) : null}
+              {onZLockedChange ? (
+                <label className="flex cursor-pointer items-center gap-2 text-xs text-ads-text-subtle">
+                  <input
+                    type="checkbox"
+                    checked={zLocked}
+                    onChange={(e) => onZLockedChange(e.target.checked)}
+                    className="accent-blue-500"
+                  />
+                  Hard-lock Z to zTarget depth
+                </label>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
       </section>
       <section>
         <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-ads-text">
           Axes: power (Y) and uchi–soto tilt (Z)
         </h3>
         <p>
-          <strong className="text-ads-text-accent-teal-bolder">Y</strong> pulls nodes with
-          higher <strong>narrative power scores</strong> upward—our ordinal model of{" "}
+          <strong className="text-ads-text-accent-teal-bolder">Y</strong> pulls each node
+          toward a target height proportional to its{" "}
+          <strong>basePower</strong> (0–10 scale → 0–14 world units), with a spring
+          strength of 0.55 that competes with link and repulsion forces. For Spirited Away,
+          basePower is corpus-derived net deference received; for other films it is a
+          hand-coded estimate of{" "}
           <strong>institutional or narrative rank</strong>.{" "}
           <strong className="text-ads-text-accent-yellow-bolder">Z</strong> is driven by a{" "}
           <strong>depth target</strong>, a compact stand-in for{" "}
@@ -140,14 +206,14 @@ function MethodTab() {
         </h3>
         <p>
           Look for <strong>steep Y separation</strong> between clusters,{" "}
-          <strong>dashed ties</strong> whose <strong>stroke weight, dash length, gap, and
-          crawl speed</strong> all scale with <strong>honorific formality</strong> and{" "}
-          <strong>social distance</strong> (heavier / faster = more honorification load and
-          relational stretch), plus a <strong>neutral gray</strong> stroke ramp along that
-          same blend—and <strong>long vs short resting edges</strong> from the force formula. The
-          model is <strong>interpretive</strong>:
-          it compresses scenes into a few numbers so you can argue visually, not replace
-          linguistics.
+          <strong>directed dashed ties</strong> whose <strong>stroke weight, dash length,
+          gap, and crawl speed</strong> all scale with <strong>honorific formality</strong>,{" "}
+          <strong>social distance</strong>, and <strong>hierarchy salience</strong> (heavier /
+          faster = more load, relational stretch, and salient upward deferral), plus a{" "}
+          <strong>neutral gray</strong> stroke ramp along that same blend—and{" "}
+          <strong>long vs short resting edges</strong> from the force formula. The model is{" "}
+          <strong>interpretive</strong>: it compresses scenes into a few numbers so you can
+          argue visually, not replace linguistics.
         </p>
       </section>
     </div>
@@ -177,29 +243,35 @@ function LegendTab() {
       </section>
       <section>
         <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-ads-text">
-          Edges (dashes = stance weights)
+          Edges (directed dashes = stance weights)
         </h3>
         <ul className="list-inside list-disc space-y-2 text-[13px] marker:text-ads-text-subtlest">
           <li>
-            Every link is a <strong>pulsing dashed</strong> line (motion = time; faster
-            crawl = a stronger blend of honorific formality and social distance).
+            Every link is a <strong>pulsing dashed</strong> line with a{" "}
+            <strong>cone arrowhead</strong> at the target end — the arrow points toward
+            the node being deferred to (the addressee).
           </li>
           <li>
-            <strong>Thicker stroke</strong> → more honorification load (higher formality).
+            <strong>Faster crawl</strong> → stronger blend of honorific formality, social
+            distance, and hierarchy salience on that edge.
           </li>
           <li>
-            <strong>Longer gaps / dash rhythm</strong> → more relational stretch (higher
-            social distance).
+            <strong>Thicker stroke</strong> → higher honorification load, social distance,
+            and hierarchy salience. Hierarchy salience carries the largest weight, so the
+            widest edges are salient upward-deferral dyads, not just high-formality ones.
+          </li>
+          <li>
+            <strong>Longer dash gaps</strong> → more relational stretch (higher social
+            distance). Dash length itself scales more with formality.
           </li>
           <li>
             <strong>Lighter gray</strong> → combined upward stance;{" "}
-            <strong>dimmer slate</strong> → flatter or peer-ish dyads (still neutral, not
-            brand blue).
+            <strong>dimmer slate</strong> → flatter or peer-ish dyads.
           </li>
           <li>
-            Resting edge <strong>length in 3D</strong> still follows the same distance rule
-            as the force simulation (see Method tab): base spacing plus weighted formality
-            and social distance.
+            Resting edge <strong>length in 3D</strong> follows the force formula (see
+            Method tab): base spacing plus formality and social distance, minus a
+            hierarchy pull.
           </li>
         </ul>
       </section>
@@ -224,7 +296,6 @@ function EvidenceTab({ sceneEvidence }) {
               className="rounded-lg border border-ads-border/90 bg-ads-surface-raised/40 px-4 py-4 shadow-sm"
             >
               <p className="font-medium text-ads-text">{s.title}</p>
-              <p className="mt-1 text-[11px] text-ads-text-subtlest">{s.approximateTimecode}</p>
               <dl className="mt-3 grid grid-cols-3 gap-x-4 gap-y-2.5 text-[11px]">
                 <div>
                   <dt className="text-ads-text-subtlest">desu/masu</dt>

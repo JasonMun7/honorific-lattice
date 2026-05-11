@@ -1,4 +1,4 @@
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
@@ -44,8 +44,12 @@ function edgeStyle(link) {
   return { f, sd, w, hi };
 }
 
+// Pre-allocated Y-axis vector used for arrowhead orientation in every WeightedEdge.
+// Shared across instances to avoid per-frame allocation.
+const _YAXIS = new THREE.Vector3(0, 1, 0);
+
 function WeightedEdge({ link, visible }) {
-  const { line, geom, mat } = useMemo(() => {
+  const { line, geom, mat, arrow, arrowMat, _dir, _q } = useMemo(() => {
     const g = new LineGeometry();
     const m = new LineMaterial({
       color: 0x96999e,
@@ -58,7 +62,19 @@ function WeightedEdge({ link, visible }) {
     m.dashScale = 1;
     const l = new Line2(g, m);
     l.frustumCulled = false;
-    return { line: l, geom: g, mat: m };
+
+    // Arrowhead cone — points along +Y by default; oriented each frame via
+    // quaternion rotation from +Y → (target − source) direction.
+    // Geometry: radius 0.13, height 0.34, 6 sides (hexagonal).
+    const am = new THREE.MeshBasicMaterial({ transparent: true, depthTest: true });
+    const a = new THREE.Mesh(new THREE.ConeGeometry(0.13, 0.34, 6), am);
+    a.frustumCulled = false;
+
+    // Pre-allocated helpers — reused each frame to avoid GC pressure.
+    const _dir = new THREE.Vector3();
+    const _q = new THREE.Quaternion();
+
+    return { line: l, geom: g, mat: m, arrow: a, arrowMat: am, _dir, _q };
   }, []);
 
   const { size } = useThree();
@@ -72,8 +88,10 @@ function WeightedEdge({ link, visible }) {
     () => () => {
       geom.dispose();
       mat.dispose();
+      arrow.geometry.dispose();
+      arrowMat.dispose();
     },
-    [geom, mat],
+    [geom, mat, arrow, arrowMat],
   );
 
   useFrame(({ clock }) => {
@@ -95,10 +113,34 @@ function WeightedEdge({ link, visible }) {
 
     const tCol = Math.min(1, (f * 0.35 + sd * 0.22 + hi * 0.55) / 3.2);
     mat.color.copy(COLOR_EDGE_LO).lerp(COLOR_EDGE_HI, tCol);
+
+    // Arrowhead: place at the target node surface, orient along s→t.
+    // The cone tip sits at offset 1.1 from the target centre (≈ node radius).
+    // Hidden when nodes are so close the arrow would overlap the geometry.
+    _dir.set(t.x - s.x, t.y - s.y, t.z - s.z);
+    const edgeLen = _dir.length();
+    arrow.visible = edgeLen > 2.0;
+    if (arrow.visible) {
+      _dir.normalize();
+      arrow.position.set(
+        t.x - _dir.x * 1.1,
+        t.y - _dir.y * 1.1,
+        t.z - _dir.z * 1.1,
+      );
+      _q.setFromUnitVectors(_YAXIS, _dir);
+      arrow.quaternion.copy(_q);
+      arrowMat.color.copy(mat.color);
+      arrowMat.opacity = Math.min(0.92, mat.opacity * 1.4);
+    }
   });
 
   if (!visible) return null;
-  return <primitive object={line} dispose={null} />;
+  return (
+    <>
+      <primitive object={line} dispose={null} />
+      <primitive object={arrow} dispose={null} />
+    </>
+  );
 }
 
 function nodeScale(basePower) {
@@ -210,9 +252,16 @@ function GraphNode({ node, onSelectNode, dimmed, selected }) {
   );
 }
 
-export default function ForceGraph({ data, focusNodeId, onSelectNode }) {
+export default function ForceGraph({ data, focusNodeId, onSelectNode, yStrength = 0.55, yLocked = false, zLocked = false }) {
   const [graph, setGraph] = useState(null);
   const rootRef = useRef(null);
+  const simRef = useRef(null);
+  const yStrengthRef = useRef(yStrength);
+  yStrengthRef.current = yStrength;
+  const yLockedRef = useRef(yLocked);
+  yLockedRef.current = yLocked;
+  const zLockedRef = useRef(zLocked);
+  zLockedRef.current = zLocked;
 
   const visibleIds = useMemo(() => {
     if (!focusNodeId) return null;
@@ -240,20 +289,52 @@ export default function ForceGraph({ data, focusNodeId, onSelectNode }) {
       .force("center", forceCenter(0, 0, 0))
       .force(
         "y",
-        forceY((d) => (Number(d.basePower) / 10) * 14).strength(0.55),
+        forceY((d) => (Number(d.basePower) / 10) * 14).strength(yStrengthRef.current),
       )
       .force(
         "z",
         forceZ((d) => Number(d.zTarget) || 0).strength(0.48),
       );
 
+    // Apply hard locks if active at construction time.
+    for (const node of nodes) {
+      if (yLockedRef.current) node.fy = (Number(node.basePower) / 10) * 70;
+      if (zLockedRef.current) node.fz = (Number(node.zTarget) || 0) * 10;
+    }
+
     sim.alpha(1).restart();
+    simRef.current = sim;
     setGraph({ sim, nodes, links });
 
     return () => {
       sim.stop();
     };
   }, [data]);
+
+  useEffect(() => {
+    const sim = simRef.current;
+    if (!sim) return;
+    sim.force("y").strength(yStrength);
+    sim.alpha(0.3).restart();
+  }, [yStrength]);
+
+  useEffect(() => {
+    const sim = simRef.current;
+    if (!sim) return;
+    for (const node of sim.nodes()) {
+      node.fy = yLocked ? (Number(node.basePower) / 10) * 70 : undefined;
+    }
+    sim.alpha(0.3).restart();
+  }, [yLocked]);
+
+  useEffect(() => {
+    const sim = simRef.current;
+    if (!sim) return;
+    for (const node of sim.nodes()) {
+      node.fz = zLocked ? (Number(node.zTarget) || 0) * 10 : undefined;
+    }
+    sim.alpha(0.3).restart();
+  }, [zLocked]);
 
   useLayoutEffect(() => {
     if (rootRef.current) {

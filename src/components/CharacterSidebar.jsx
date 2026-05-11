@@ -48,6 +48,12 @@ const panelHeaderIconBtn =
  *   methodologyTab: string;
  *   onMethodologyTabChange: (id: string) => void;
  *   sceneEvidence: object;
+ *   yStrength: number;
+ *   onYStrengthChange: (v: number) => void;
+ *   yLocked: boolean;
+ *   onYLockedChange: (v: boolean) => void;
+ *   zLocked: boolean;
+ *   onZLockedChange: (v: boolean) => void;
  *   onToggleFilmId: (id: string) => void;
  *   onClearFilmFilter: () => void;
  *   onPickCharacter: (id: string) => void;
@@ -67,6 +73,12 @@ export default function CharacterSidebar({
   methodologyTab,
   onMethodologyTabChange,
   sceneEvidence,
+  yStrength,
+  onYStrengthChange,
+  yLocked,
+  onYLockedChange,
+  zLocked,
+  onZLockedChange,
   onToggleFilmId,
   onClearFilmFilter,
   onPickCharacter,
@@ -245,6 +257,12 @@ export default function CharacterSidebar({
                 tab={methodologyTab}
                 onTabChange={onMethodologyTabChange}
                 sceneEvidence={sceneEvidence}
+                yStrength={yStrength}
+                onYStrengthChange={onYStrengthChange}
+                yLocked={yLocked}
+                onYLockedChange={onYLockedChange}
+                zLocked={zLocked}
+                onZLockedChange={onZLockedChange}
               />
             </div>
           ) : !filmHasGraph ? (

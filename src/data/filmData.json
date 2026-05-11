@@ -5,7 +5,7 @@
       "id": "Chihiro",
       "name": "Chihiro",
       "film": "Spirited Away",
-      "basePower": 1,
+      "basePower": 1.6,
       "type": "human",
       "role": "Protagonist / newcomer",
       "zTarget": 2.5,
@@ -15,7 +15,7 @@
       "id": "Yubaba",
       "name": "Yubaba",
       "film": "Spirited Away",
-      "basePower": 10,
+      "basePower": 5.5,
       "type": "spirit-boss",
       "role": "Bathhouse sovereign",
       "zTarget": -4,
@@ -25,7 +25,7 @@
       "id": "Zeniba",
       "name": "Zeniba",
       "film": "Spirited Away",
-      "basePower": 9,
+      "basePower": 3.3,
       "type": "spirit-sage",
       "role": "Swamp-bottom twin / counter-sovereign",
       "zTarget": 2.2,
@@ -35,7 +35,7 @@
       "id": "Haku",
       "name": "Haku",
       "film": "Spirited Away",
-      "basePower": 7,
+      "basePower": 3,
       "type": "spirit-manager",
       "role": "Agent / guide",
       "zTarget": 0.5,
@@ -45,7 +45,7 @@
       "id": "RiverSpirit",
       "name": "River Spirit",
       "film": "Spirited Away",
-      "basePower": 6,
+      "basePower": 9.2,
       "type": "spirit-guest",
       "role": "Stink Spirit / honored guest",
       "zTarget": 0,
@@ -55,7 +55,7 @@
       "id": "Boh",
       "name": "Boh",
       "film": "Spirited Away",
-      "basePower": 6,
+      "basePower": 3.3,
       "type": "spirit-child",
       "role": "Yubaba’s son",
       "zTarget": -3,
@@ -65,7 +65,7 @@
       "id": "NoFace",
       "name": "No-Face",
       "film": "Spirited Away",
-      "basePower": 5,
+      "basePower": 3.1,
       "type": "spirit-anomaly",
       "role": "Mute mimic / consumer of courtesy",
       "zTarget": 1.5,
@@ -75,7 +75,7 @@
       "id": "Kamaji",
       "name": "Kamaji",
       "film": "Spirited Away",
-      "basePower": 4,
+      "basePower": 4.8,
       "type": "worker",
       "role": "Boiler room operator",
       "zTarget": 1.2,
@@ -85,7 +85,7 @@
       "id": "Foreman",
       "name": "Aniyaku (foreman)",
       "film": "Spirited Away",
-      "basePower": 4,
+      "basePower": 2.6,
       "type": "worker",
       "role": "Bathhouse floor foreman",
       "zTarget": 1.5,
@@ -95,7 +95,7 @@
       "id": "Lin",
       "name": "Lin",
       "film": "Spirited Away",
-      "basePower": 3,
+      "basePower": 2.6,
       "type": "worker",
       "role": "Bathhouse attendant",
       "zTarget": 1.8,
@@ -105,7 +105,7 @@
       "id": "Aogaeru",
       "name": "Aogaeru",
       "film": "Spirited Away",
-      "basePower": 2,
+      "basePower": 3.5,
       "type": "worker",
       "role": "Frog cashier / clerk",
       "zTarget": 1.6,
@@ -115,7 +115,7 @@
       "id": "Chichiyaku",
       "name": "Chichiyaku",
       "film": "Spirited Away",
-      "basePower": 2,
+      "basePower": 2.6,
       "type": "worker",
       "role": "Chicken-neck clerk",
       "zTarget": 1.6,
@@ -135,7 +135,7 @@
       "id": "BandaiKaeru",
       "name": "Bandai-gaeru",
       "film": "Spirited Away",
-      "basePower": 2,
+      "basePower": 2.4,
       "type": "worker",
       "role": "Counter / chickening spirit",
       "zTarget": 1.7,
@@ -145,7 +145,7 @@
       "id": "RadishSpirit",
       "name": "Ōshira-sama (radish)",
       "film": "Spirited Away",
-      "basePower": 4,
+      "basePower": 10,
       "type": "spirit-guest",
       "role": "Elevator guest / minor kami",
       "zTarget": 0.8,
@@ -245,7 +245,7 @@
       "id": "ChihiroFather",
       "name": "Akio (father, pig)",
       "film": "Spirited Away",
-      "basePower": 0.5,
+      "basePower": 3.1,
       "type": "transformed-human",
       "role": "Chihiro’s father (cursed)",
       "zTarget": 3,
@@ -255,7 +255,7 @@
       "id": "ChihiroMother",
       "name": "Yuko (mother, pig)",
       "film": "Spirited Away",
-      "basePower": 0.5,
+      "basePower": 2.4,
       "type": "transformed-human",
       "role": "Chihiro’s mother (cursed)",
       "zTarget": 3,
@@ -1082,42 +1082,42 @@
       "target": "Yubaba",
       "formality": 3,
       "label": "Sonkeigo-style deferral (directed up)",
-      "socialDistance": 4
+      "socialDistance": 2.11
     },
     {
       "source": "Yubaba",
       "target": "Chihiro",
       "formality": 0,
       "label": "Commanding / low addressee honorification",
-      "socialDistance": 4
+      "socialDistance": 1.6
     },
     {
       "source": "Chihiro",
       "target": "Zeniba",
       "formality": 2,
       "label": "Polite respect to outsider elder",
-      "socialDistance": 2
+      "socialDistance": 2.08
     },
     {
       "source": "Zeniba",
       "target": "Chihiro",
       "formality": 0,
       "label": "Warm plain speech / diminutive care",
-      "socialDistance": 1.2
+      "socialDistance": 1.59
     },
     {
       "source": "Zeniba",
       "target": "Haku",
       "formality": 2,
       "label": "Magical-institutional alignment",
-      "socialDistance": 2
+      "socialDistance": 2.2
     },
     {
       "source": "Haku",
       "target": "Yubaba",
       "formality": 2,
       "label": "Institutional politeness upward",
-      "socialDistance": 2
+      "socialDistance": 3.53
     },
     {
       "source": "Haku",
@@ -1131,7 +1131,7 @@
       "target": "RiverSpirit",
       "formality": 3,
       "label": "High honorification in service sequence",
-      "socialDistance": 3
+      "socialDistance": 1
     },
     {
       "source": "RiverSpirit",
@@ -1145,35 +1145,35 @@
       "target": "Kamaji",
       "formality": 2,
       "label": "Polite out-group presentation",
-      "socialDistance": 3
+      "socialDistance": 2.19
     },
     {
       "source": "Chihiro",
       "target": "Haku",
       "formality": 2,
       "label": "Care asymmetry with trust",
-      "socialDistance": 1.5
+      "socialDistance": 1.06
     },
     {
       "source": "Lin",
       "target": "Chihiro",
       "formality": 1,
       "label": "Workplace casual-polite",
-      "socialDistance": 2
+      "socialDistance": 1.07
     },
     {
       "source": "Lin",
       "target": "Foreman",
       "formality": 2,
       "label": "Upward workplace politeness",
-      "socialDistance": 2
+      "socialDistance": 1
     },
     {
       "source": "Foreman",
       "target": "Lin",
       "formality": 1,
       "label": "Directive / compressed polite",
-      "socialDistance": 2
+      "socialDistance": 1
     },
     {
       "source": "Foreman",
@@ -1187,28 +1187,28 @@
       "target": "Boh",
       "formality": 0,
       "label": "Mother-to-child directives",
-      "socialDistance": 2
+      "socialDistance": 1.6
     },
     {
       "source": "Boh",
       "target": "Yubaba",
       "formality": 1,
       "label": "Child appeals",
-      "socialDistance": 1.5
+      "socialDistance": 1.32
     },
     {
       "source": "Chihiro",
       "target": "NoFace",
       "formality": 2,
       "label": "Cautious polite to uncanny guest",
-      "socialDistance": 2.5
+      "socialDistance": 2.32
     },
     {
       "source": "NoFace",
       "target": "Chihiro",
       "formality": 0,
       "label": "Mimicry / plain fragments",
-      "socialDistance": 3
+      "socialDistance": 1.71
     },
     {
       "source": "NoFace",
@@ -1222,7 +1222,7 @@
       "target": "NoFace",
       "formality": 1,
       "label": "Transactional commands",
-      "socialDistance": 3
+      "socialDistance": 3.4
     },
     {
       "source": "Chihiro",
@@ -1236,7 +1236,7 @@
       "target": "ChihiroMother",
       "formality": 1,
       "label": "Family plain under distress",
-      "socialDistance": 1
+      "socialDistance": 1.54
     },
     {
       "source": "Yubaba",
@@ -1264,35 +1264,35 @@
       "target": "Chihiro",
       "formality": 1,
       "label": "Clipped workplace reply",
-      "socialDistance": 2.5
+      "socialDistance": 1
     },
     {
       "source": "Aogaeru",
       "target": "Yubaba",
       "formality": 3,
       "label": "Maximal upward honorification",
-      "socialDistance": 3
+      "socialDistance": 2.2
     },
     {
       "source": "Yubaba",
       "target": "Aogaeru",
       "formality": 0,
       "label": "Peremptory office speech",
-      "socialDistance": 2.5
+      "socialDistance": 1.65
     },
     {
       "source": "Chichiyaku",
       "target": "Yubaba",
       "formality": 3,
       "label": "Parallel clerk upward keigo",
-      "socialDistance": 3
+      "socialDistance": 1.93
     },
     {
       "source": "Yubaba",
       "target": "Chichiyaku",
       "formality": 0,
       "label": "Commands / minimal reciprocity",
-      "socialDistance": 2.5
+      "socialDistance": 1.5
     },
     {
       "source": "Chichiyaku",
@@ -1327,28 +1327,28 @@
       "target": "Chihiro",
       "formality": 1,
       "label": "Ritual challenge / teasing plain",
-      "socialDistance": 2
+      "socialDistance": 3.1
     },
     {
       "source": "Chihiro",
       "target": "BandaiKaeru",
       "formality": 2,
       "label": "Polite refusal / request",
-      "socialDistance": 2
+      "socialDistance": 4
     },
     {
       "source": "Lin",
       "target": "RadishSpirit",
       "formality": 2,
       "label": "Guest-service desu/masu",
-      "socialDistance": 2
+      "socialDistance": 4
     },
     {
       "source": "RadishSpirit",
       "target": "Lin",
       "formality": 1,
       "label": "Soft acknowledgment",
-      "socialDistance": 1.8
+      "socialDistance": 3.1
     },
     {
       "source": "Chihiro",
@@ -1523,21 +1523,21 @@
       "target": "Lin",
       "formality": 1,
       "label": "Cross-department polite coordination",
-      "socialDistance": 1.8
+      "socialDistance": 1
     },
     {
       "source": "Lin",
       "target": "Haku",
       "formality": 2,
       "label": "Respect to higher-ranked agent",
-      "socialDistance": 1.8
+      "socialDistance": 1
     },
     {
       "source": "Zeniba",
       "target": "NoFace",
       "formality": 0,
       "label": "Plain magical containment speech",
-      "socialDistance": 2
+      "socialDistance": 1
     },
     {
       "source": "Chihiro",
@@ -2196,6 +2196,104 @@
       "formality": 0,
       "label": "Chorus groan (anti-speech)",
       "socialDistance": 2.5
+    },
+    {
+      "source": "Haku",
+      "target": "Zeniba",
+      "formality": 0,
+      "label": "Corpus: plain speech (Haku→Zeniba)",
+      "socialDistance": 1.65
+    },
+    {
+      "source": "Yubaba",
+      "target": "Haku",
+      "formality": 0,
+      "label": "Corpus: plain speech (Yubaba→Haku)",
+      "socialDistance": 2.36
+    },
+    {
+      "source": "Kamaji",
+      "target": "Chihiro",
+      "formality": 0.2,
+      "label": "Corpus: plain speech (Kamaji→Chihiro)",
+      "socialDistance": 1.71
+    },
+    {
+      "source": "Haku",
+      "target": "Chihiro",
+      "formality": 0.09,
+      "label": "Corpus: plain speech (Haku→Chihiro)",
+      "socialDistance": 1.07
+    },
+    {
+      "source": "Chihiro",
+      "target": "Lin",
+      "formality": 0.1,
+      "label": "Corpus: plain speech (Chihiro→Lin)",
+      "socialDistance": 1.11
+    },
+    {
+      "source": "ChihiroFather",
+      "target": "Chihiro",
+      "formality": 0,
+      "label": "Corpus: plain speech (ChihiroFather→Chihiro)",
+      "socialDistance": 1
+    },
+    {
+      "source": "ChihiroMother",
+      "target": "Chihiro",
+      "formality": 0.77,
+      "label": "Corpus: polite acknowledgment (ChihiroMother→Chihiro)",
+      "socialDistance": 2
+    },
+    {
+      "source": "ChihiroFather",
+      "target": "Yubaba",
+      "formality": 0,
+      "label": "Corpus: plain speech (ChihiroFather→Yubaba)",
+      "socialDistance": 1
+    },
+    {
+      "source": "ChihiroMother",
+      "target": "Yubaba",
+      "formality": 0,
+      "label": "Corpus: plain speech (ChihiroMother→Yubaba)",
+      "socialDistance": 1
+    },
+    {
+      "source": "Aogaeru",
+      "target": "Chichiyaku",
+      "formality": 0,
+      "label": "Corpus: plain speech (Aogaeru→Chichiyaku)",
+      "socialDistance": 1
+    },
+    {
+      "source": "RadishSpirit",
+      "target": "Chihiro",
+      "formality": 0,
+      "label": "Corpus: plain speech (RadishSpirit→Chihiro)",
+      "socialDistance": 1
+    },
+    {
+      "source": "Aogaeru",
+      "target": "Foreman",
+      "formality": 0,
+      "label": "Corpus: plain speech (Aogaeru→Foreman)",
+      "socialDistance": 1
+    },
+    {
+      "source": "Chichiyaku",
+      "target": "Foreman",
+      "formality": 0,
+      "label": "Corpus: plain speech (Chichiyaku→Foreman)",
+      "socialDistance": 1
+    },
+    {
+      "source": "NoFace",
+      "target": "Zeniba",
+      "formality": 0,
+      "label": "Corpus: plain speech (NoFace→Zeniba)",
+      "socialDistance": 1
     }
   ]
 }

@@ -1,8 +1,48 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Stars, PerspectiveCamera } from "@react-three/drei";
+import { Html, OrbitControls, Stars, PerspectiveCamera } from "@react-three/drei";
 import * as THREE from "three";
 import ForceGraph from "./ForceGraph.jsx";
+
+const Z_LABEL = {
+  pointerEvents: "none",
+  userSelect: "none",
+  color: "#96999e",
+  fontSize: "11px",
+  whiteSpace: "nowrap",
+  fontWeight: 500,
+};
+
+// Shaft spans zTarget data range (−4 to +3) with 1-unit margin on each side.
+// Centered at −0.5 (midpoint of that range). Sits below the main node cluster.
+const SHAFT_LEN = 10;
+const CONE_H = 0.7;
+const CONE_R = 0.2;
+
+function ZAxisIndicator() {
+  return (
+    <group position={[0, -10, -0.5]}>
+      <mesh rotation={[Math.PI / 2, 0, 0]}>
+        <cylinderGeometry args={[0.05, 0.05, SHAFT_LEN, 8]} />
+        <meshBasicMaterial color="#5c6068" transparent opacity={0.7} />
+      </mesh>
+      {/* Arrowhead pointing toward +Z (soto) */}
+      <mesh position={[0, 0, SHAFT_LEN / 2 + CONE_H / 2]} rotation={[Math.PI / 2, 0, 0]}>
+        <coneGeometry args={[CONE_R, CONE_H, 8]} />
+        <meshBasicMaterial color="#96999e" transparent opacity={0.85} />
+      </mesh>
+      <Html position={[0, 0.7, SHAFT_LEN / 2 + CONE_H + 0.9]} center distanceFactor={22} style={Z_LABEL}>
+        soto (+)
+      </Html>
+      <Html position={[0, 0.7, -(SHAFT_LEN / 2) - 0.9]} center distanceFactor={22} style={Z_LABEL}>
+        (−) uchi
+      </Html>
+      <Html position={[0.8, 1.4, 0]} center distanceFactor={22} style={{ ...Z_LABEL, fontSize: "10px", color: "#5c6068", letterSpacing: "0.07em" }}>
+        Z DEPTH
+      </Html>
+    </group>
+  );
+}
 
 /** Fallback overview when node positions are not ready yet. */
 const DEFAULT_CAM = new THREE.Vector3(0, 7, 46);
@@ -97,6 +137,9 @@ export default function GraphCanvasInner({
   focusNodeId,
   fullGraphOverviewNonce = 0,
   onSelectNode,
+  yStrength = 0.55,
+  yLocked = false,
+  zLocked = false,
 }) {
   const { gl } = useThree();
   const controlsRef = useRef(null);
@@ -370,10 +413,14 @@ export default function GraphCanvasInner({
       <ambientLight intensity={0.45} />
       <directionalLight position={[8, 14, 6]} intensity={1.1} />
       <pointLight position={[-10, -6, -8]} intensity={0.35} color="#4688EC" />
+      <ZAxisIndicator />
       <ForceGraph
         data={data}
         focusNodeId={focusNodeId}
         onSelectNode={handleSelectNode}
+        yStrength={yStrength}
+        yLocked={yLocked}
+        zLocked={zLocked}
       />
     </>
   );
