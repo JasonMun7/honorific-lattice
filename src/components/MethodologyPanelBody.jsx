@@ -114,9 +114,8 @@ function MethodTab({ yStrength, onYStrengthChange, yLocked, onYLockedChange, zLo
           The 3D layout also uses a derived{" "}
           <strong className="text-ads-text">hierarchy salience</strong>: directed formality
           counts for more when it runs <em>up</em> the institutional rank encoded on each
-          node (<code className="text-ads-text">basePower</code>). Those dyads get slightly
-          shorter springs and stronger link forces so deferential stance and power line up
-          visually; edges are drawn a bit thicker and brighter where that signal is strong.
+          node (<code className="text-ads-text">basePower</code>). This quantity drives
+          edge color — lighter edges mark salient upward-deferral dyads.
         </p>
       </section>
       <section>
@@ -124,15 +123,12 @@ function MethodTab({ yStrength, onYStrengthChange, yLocked, onYLockedChange, zLo
           Force layout
         </h3>
         <p>
-          The simulation sets resting link distance to{" "}
+          Resting link distance is{" "}
           <span className="whitespace-nowrap font-medium text-ads-text">
-            max(4.2, 6 + 2.2×<em>f</em> + 0.9×<em>sd</em> − 2.6×<em>hi</em>)
+            max(4.2, 6 + 2.5×<em>sd</em>)
           </span>{" "}
-          where <em>f</em> is honorific formality, <em>sd</em> is social distance, and{" "}
-          <em>hi</em> is hierarchy salience on that edge. Higher formality or social
-          distance → <strong>longer edges</strong>; stronger hierarchy salience{" "}
-          <strong>shortens</strong> the spring, drawing deferential dyads slightly
-          closer so rank alignment is visible in space.
+          where <em>sd</em> is social distance. Higher social distance → longer edges;
+          formality and hierarchy salience do not affect spring length.
         </p>
         {onYStrengthChange ? (
           <div className="mt-3 rounded-md border border-ads-border/60 bg-ads-surface-sunken px-3 py-2.5">
@@ -205,15 +201,13 @@ function MethodTab({ yStrength, onYStrengthChange, yLocked, onYLockedChange, zLo
           Reading hierarchy from the graph
         </h3>
         <p>
-          Look for <strong>steep Y separation</strong> between clusters,{" "}
-          <strong>directed dashed ties</strong> whose <strong>stroke weight, dash length,
-          gap, and crawl speed</strong> all scale with <strong>honorific formality</strong>,{" "}
-          <strong>social distance</strong>, and <strong>hierarchy salience</strong> (heavier /
-          faster = more load, relational stretch, and salient upward deferral), plus a{" "}
-          <strong>neutral gray</strong> stroke ramp along that same blend—and{" "}
-          <strong>long vs short resting edges</strong> from the force formula. The model is{" "}
-          <strong>interpretive</strong>: it compresses scenes into a few numbers so you can
-          argue visually, not replace linguistics.
+          Look for <strong>steep Y separation</strong> between clusters and{" "}
+          <strong>directed dashed ties</strong> where each visual channel encodes exactly
+          one quantity: <strong>stroke width</strong> = honorific formality;{" "}
+          <strong>color</strong> = hierarchy salience (white = zero salience, red = maximum upward deferral); <strong>dash length</strong> and{" "}
+          <strong>resting edge length</strong>{" "}
+          = social distance. The model is <strong>interpretive</strong>: it compresses
+          scenes into a few numbers so you can argue visually, not replace linguistics.
         </p>
       </section>
     </div>
@@ -233,45 +227,34 @@ function LegendTab() {
             higher <strong>base power</strong> in the encoded hierarchy.
           </li>
           <li>
-            <span className="font-medium text-ads-text">Warm orange</span> — ADS chart
-            categorical token for very high narrative power (about 7/10 and above:
-            sovereign-tier, senior agents, apex guests in context).{" "}
-            <span className="text-ads-text-subtle">Cool blue</span> — chart categorical blue
-            for lower ranks.
+            Node color is a <strong>continuous spectrum</strong>:{" "}
+            <span className="text-ads-text-subtle">cool blue</span> at rank 0 →{" "}
+            <span className="font-medium text-ads-text">warm orange</span> at rank 10.
           </li>
         </ul>
       </section>
       <section>
         <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-ads-text">
-          Edges (directed dashes = stance weights)
+          Edges — one channel, one quantity
         </h3>
         <ul className="list-inside list-disc space-y-2 text-[13px] marker:text-ads-text-subtlest">
           <li>
-            Every link is a <strong>pulsing dashed</strong> line with a{" "}
-            <strong>cone arrowhead</strong> at the target end — the arrow points toward
-            the node being deferred to (the addressee).
+            <strong>Arrow direction</strong> — points toward the addressee; encodes who is
+            deferring to whom.
           </li>
           <li>
-            <strong>Faster crawl</strong> → stronger blend of honorific formality, social
-            distance, and hierarchy salience on that edge.
+            <strong>Line width</strong> — encodes <strong>honorific formality</strong> only.
+            Thicker = more keigo load on that directed tie.
           </li>
           <li>
-            <strong>Thicker stroke</strong> → higher honorification load, social distance,
-            and hierarchy salience. Hierarchy salience carries the largest weight, so the
-            widest edges are salient upward-deferral dyads, not just high-formality ones.
+            <strong>Color</strong> — encodes <strong>hierarchy salience</strong> only (how
+            strongly the speech runs upward along the institutional power gradient).
+            White = zero salience; red = maximum salient upward deferral.
           </li>
           <li>
-            <strong>Longer dash gaps</strong> → more relational stretch (higher social
-            distance). Dash length itself scales more with formality.
-          </li>
-          <li>
-            <strong>Lighter gray</strong> → combined upward stance;{" "}
-            <strong>dimmer slate</strong> → flatter or peer-ish dyads.
-          </li>
-          <li>
-            Resting edge <strong>length in 3D</strong> follows the force formula (see
-            Method tab): base spacing plus formality and social distance, minus a
-            hierarchy pull.
+            <strong>Dash length</strong> and <strong>resting edge length in 3D</strong> both
+            encode <strong>social distance</strong> only. Longer dashes and wider spacing =
+            more relational stretch across the uchi–soto boundary.
           </li>
         </ul>
       </section>

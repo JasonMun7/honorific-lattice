@@ -17,13 +17,12 @@ import {
   honorificLinkStrength,
 } from "../lib/honorificLinkMetrics.js";
 
-/** ADS chart categorical tokens — see `src/atlassian-dark.css` & DESIGN.md */
 const COLOR_COOL = new THREE.Color("#4688ec");
 const COLOR_COOL_E = new THREE.Color("#0d2530");
 const COLOR_WARM = new THREE.Color("#fca700");
 const COLOR_WARM_E = new THREE.Color("#3d2500");
-const COLOR_EDGE_LO = new THREE.Color("#5c6068");
-const COLOR_EDGE_HI = new THREE.Color("#96999e");
+const COLOR_EDGE_LO = new THREE.Color("#ffffff");
+const COLOR_EDGE_HI = new THREE.Color("#cc2200");
 
 function neighborSet(focusId, links) {
   const set = new Set([focusId]);
@@ -34,14 +33,6 @@ function neighborSet(focusId, links) {
     if (b === focusId) set.add(a);
   }
   return set;
-}
-
-function edgeStyle(link) {
-  const f = Number(link.formality) || 0;
-  const sd = Number(link.socialDistance) || 1;
-  const hi = hierarchySalience(link);
-  const w = f + sd * 0.35;
-  return { f, sd, w, hi };
 }
 
 // Pre-allocated Y-axis vector used for arrowhead orientation in every WeightedEdge.
@@ -103,16 +94,17 @@ function WeightedEdge({ link, visible }) {
     geom.setPositions([s.x, s.y, s.z, t.x, t.y, t.z]);
     line.computeLineDistances();
 
-    const { f, sd, w, hi } = edgeStyle(link);
+    const f = Number(link.formality) || 0;
+    const sd = Number(link.socialDistance) || 1;
+    const hi = hierarchySalience(link);
 
-    mat.linewidth = 1.15 + f * 0.85 + sd * 0.28 + hi * 1.35;
-    mat.dashSize = 0.38 + f * 0.14 + sd * 0.05;
-    mat.gapSize = 0.14 + sd * 0.07 + f * 0.03;
-    mat.opacity = 0.34 + f * 0.1 + sd * 0.045 + hi * 0.12;
-    mat.dashOffset = clock.getElapsedTime() * (0.45 + w * 0.28 + hi * 0.35);
+    mat.linewidth = 1.2 + f * 1.1;              // width → formality
+    mat.dashSize = 0.28 + sd * 0.18;            // dash length → socialDistance
+    mat.gapSize = 0.14;
+    mat.opacity = 0.72;
+    mat.dashOffset = clock.getElapsedTime() * 0.55;
 
-    const tCol = Math.min(1, (f * 0.35 + sd * 0.22 + hi * 0.55) / 3.2);
-    mat.color.copy(COLOR_EDGE_LO).lerp(COLOR_EDGE_HI, tCol);
+    mat.color.copy(COLOR_EDGE_LO).lerp(COLOR_EDGE_HI, hi);  // color → hierarchySalience
 
     // Arrowhead: place at the target node surface, orient along s→t.
     // The cone tip sits at offset 1.1 from the target centre (≈ node radius).
@@ -130,7 +122,7 @@ function WeightedEdge({ link, visible }) {
       _q.setFromUnitVectors(_YAXIS, _dir);
       arrow.quaternion.copy(_q);
       arrowMat.color.copy(mat.color);
-      arrowMat.opacity = Math.min(0.92, mat.opacity * 1.4);
+      arrowMat.opacity = 0.82;
     }
   });
 
@@ -154,20 +146,14 @@ const COLOR_SELECT_RIM = new THREE.Color("#6eb0ff");
 function NodeShape({ node, selected }) {
   const s = nodeScale(node.basePower);
   const bp = Number(node.basePower) || 0;
-  const warm = bp >= 7;
-  const color = warm ? COLOR_WARM : COLOR_COOL;
-  const emissive = warm ? COLOR_WARM_E : COLOR_COOL_E;
+  const t = bp / 10;
+  const color = useMemo(() => COLOR_COOL.clone().lerp(COLOR_WARM, t), [t]);
+  const emissive = useMemo(() => COLOR_COOL_E.clone().lerp(COLOR_WARM_E, t), [t]);
 
   const matProps = {
     color,
     emissive: selected ? emissive.clone().lerp(COLOR_SELECT_RIM, 0.35) : emissive,
-    emissiveIntensity: selected
-      ? warm
-        ? 0.78
-        : 0.72
-      : warm
-        ? 0.48
-        : 0.4,
+    emissiveIntensity: selected ? 0.75 : 0.44,
     roughness: selected ? 0.26 : 0.34,
     metalness: selected ? 0.22 : 0.12,
   };
