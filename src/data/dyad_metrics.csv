@@ -1,0 +1,147 @@
+speaker,addressee,line_count,raw_formality,formality,formality_reverse,socialDistance,low_sample
+蛙男,group:bathhouse visitors,1,3,3,0,4,true
+蛙男,group:arriving guests,1,6,3,0,4,true
+リン,お白様,3,2,3,0,4,false
+蛙男,group:bathhouse guests,2,4,3,0,4,true
+番台蛙,湯婆婆,4,1.625,3,0,4,false
+千尋,番台蛙,2,2.25,3,0.154,4,true
+青蛙、,河の神,3,4,3,0,4,false
+湯婆婆,顔無し (青蛙),1,3,3,0,4,true
+ハク,湯婆婆,9,1.0556,1.949,0,3.533,false
+蛙男,ハク,3,1,1.846,0,3.4,false
+湯女,ハク,1,1,1.846,0,3.4,true
+兄役,group:湯婆婆 and associates,1,1,1.846,0,3.4,true
+蛙男,group:bathhouse staff,1,1,1.846,0,3.4,true
+湯婆婆,顔無し,1,1,1.846,0,3.4,true
+ハク,釜爺,6,1,1.846,0,3.4,false
+兄役,顔無し(青蛙),5,0.8,1.477,0,2.92,false
+湯女１,group:bathhouse workers,3,0.6667,1.231,0,2.6,false
+千尋,顔無し,10,0.55,1.015,0,2.32,false
+千尋,釜爺,21,0.5476,1.011,0.2,2.195,false
+リン,group:workers,4,0.5,0.923,0,2.2,false
+千尋,蛙男３,1,0.5,0.923,0,2.2,true
+青蛙,湯婆婆,1,0.5,0.923,0,2.2,true
+銭婆,ハク,2,0.5,0.923,0,2.2,true
+千尋,湯婆婆,26,0.4615,0.852,0,2.108,false
+千尋,銭婆,25,0.46,0.849,0.042,2.079,false
+お母さん,千尋,24,0.4167,0.769,0,2,false
+父役,湯婆婆,9,0.3889,0.718,0,1.933,false
+一同,group:bathhouse workers,10,0.3,0.554,0,1.72,false
+湯婆婆,坊,24,0.25,0.462,0,1.6,false
+リン,蛙男,4,0.125,0.231,0,1.3,false
+釜爺,千尋,37,0.1081,0.2,1.011,1.708,false
+お母さん,お父さん,14,0.1071,0.198,0,1.257,false
+番台蛙,千尋,6,0.0833,0.154,3,3.1,false
+千尋,リン,38,0.0526,0.097,0.022,1.113,false
+千尋,顔無し(兄役),10,0.05,0.092,0,1.12,false
+ハク,千尋,87,0.046,0.085,0.071,1.068,false
+千尋,ハク,65,0.0385,0.071,0.085,1.059,false
+銭婆,千尋,44,0.0227,0.042,0.849,1.594,false
+リン,千尋,85,0.0118,0.022,0.097,1.068,false
+お白様,リン,1,0,0,3,3.1,true
+湯婆婆,番台蛙,3,0,0,3,3.1,false
+湯婆婆,ハク,13,0,0,1.949,2.364,false
+ハク,蛙男,2,0,0,1.846,2.292,true
+釜爺,ハク,2,0,0,1.846,2.292,true
+顔無し(青蛙),兄役,4,0,0,1.477,2.034,false
+顔無し,千尋,10,0,0,1.015,1.711,false
+蛙男３,千尋,1,0,0,0.923,1.646,true
+ハク,銭婆,1,0,0,0.923,1.646,true
+湯婆婆,青蛙,1,0,0,0.923,1.646,true
+湯婆婆,千尋,72,0,0,0.852,1.596,false
+千尋,お母さん,6,0,0,0.769,1.538,false
+湯婆婆,父役,5,0,0,0.718,1.503,false
+坊,湯婆婆,6,0,0,0.462,1.323,false
+蛙男,リン,7,0,0,0.231,1.162,false
+お父さん,お母さん,10,0,0,0.198,1.138,false
+顔無し(兄役),千尋,6,0,0,0.092,1.065,false
+お父さん,千尋,16,0,0,0,1,false
+お母さん,group:family,9,0,0,0,1,false
+千尋,group:family,5,0,0,0,1,false
+お母さん,group:family in car,1,0,0,0,1,true
+お父さん,group:family,15,0,0,0,1,false
+千尋,group:parents,10,0,0,0,1,false
+千尋,お父さん,11,0,0,0,1,false
+お父さん,group:family members,1,0,0,0,1,true
+千尋,千尋,2,0,0,0,1,true
+青蛙,ハク,3,0,0,0,1,false
+湯女たち,group:bathhouse workers,2,0,0,0,1,true
+兄役,ハク,1,0,0,0,1,true
+兄役,group:bathhouse workers,8,0,0,0,1,false
+湯女たち,ハク,1,0,0,0,1,true
+ハク,group:bathhouse workers,4,0,0,0,1,false
+釜爺,group:boiler room workers,1,0,0,0,1,true
+釜爺,group:young workers,1,0,0,0,1,true
+釜爺,group:soot sprites,4,0,0,0,1,false
+リン,釜爺,6,0,0,0,1,false
+釜爺,group:workers,2,0,0,0,1,true
+釜爺,リン,7,0,0,0,1,false
+蛙男,group:nearby characters,1,0,0,0,1,true
+父役,ハク,2,0,0,0,1,true
+ハク,父役,1,0,0,0,1,true
+湯女２,group:bathhouse workers,3,0,0,0,1,false
+リン,ハク,3,0,0,0,1,false
+ハク,リン,1,0,0,0,1,true
+父役,千尋,2,0,0,0,1,true
+湯女３,リン,1,0,0,0,1,true
+リン,湯女３,1,0,0,0,1,true
+湯女１,千尋,1,0,0,0,1,true
+兄役,リン,2,0,0,0,1,true
+リン,兄役,3,0,0,0,1,false
+湯女２,リン,1,0,0,0,1,true
+リン,湯女２,1,0,0,0,1,true
+兄役,group:workers,1,0,0,0,1,true
+番台蛙,group:staff,1,0,0,0,1,true
+湯婆婆,group:bathhouse workers,16,0,0,0,1,false
+湯婆婆,group:bathhouse staff,3,0,0,0,1,false
+兄役,group:リン and 千尋,1,0,0,0,1,true
+千尋,兄役,1,0,0,0,1,true
+千尋,河の神,1,0,0,0,1,true
+湯婆婆,group:those present,1,0,0,0,1,true
+湯婆婆,一同,2,0,0,0,1,true
+蛙男,group:other characters,1,0,0,0,1,true
+父役,顔無し(兄役),1,0,0,0,1,true
+湯女,リン,2,0,0,0,1,true
+リン,湯女,2,0,0,0,1,true
+青蛙,group:others,1,0,0,0,1,true
+青蛙,千尋,1,0,0,0,1,true
+青蛙,group:nearby characters,1,0,0,0,1,true
+青蛙,顔無し,3,0,0,0,1,false
+顔無し,青蛙,2,0,0,0,1,true
+顔無し(青蛙),group:bathhouse workers,2,0,0,0,1,true
+千尋,group:her parents,2,0,0,0,1,true
+父役,group:bathhouse workers,1,0,0,0,1,true
+蛙男３,group:bathhouse workers,1,0,0,0,1,true
+兄役,千尋,1,0,0,0,1,true
+千尋,坊,16,0,0,0,1,false
+坊,千尋,13,0,0,0,1,false
+銭婆,group:坊 and 千尋,1,0,0,0,1,true
+銭婆,坊,3,0,0,0,1,false
+坊,銭婆,1,0,0,0,1,true
+銭婆,group:spirits/customers,1,0,0,0,1,true
+銭婆,group:spirits,1,0,0,0,1,true
+千尋,group:bathhouse workers,1,0,0,0,1,true
+釜爺,group:listeners,3,0,0,0,1,false
+湯女３,group:bathhouse workers,1,0,0,0,1,true
+顔無し (青蛙),group:bathhouse workers,1,0,0,0,1,true
+湯婆婆,group:customers,1,0,0,0,1,true
+千尋,顔無し(青蛙),2,0,0,0,1,true
+顔無し(青蛙),千尋,2,0,0,0,1,true
+顔無し(兄役),顔無し(青蛙),2,0,0,0,1,true
+顔無し(青蛙),顔無し(兄役),1,0,0,0,1,true
+坊,自分,1,0,0,0,1,true
+リン,顔無し(青蛙),1,0,0,0,1,true
+リン,顔無し,1,0,0,0,1,true
+千尋,group:train passengers,1,0,0,0,1,true
+青蛙,group:bathhouse workers,1,0,0,0,1,true
+銭婆,group:visitors,2,0,0,0,1,true
+銭婆,顔無し,2,0,0,0,1,true
+銭婆,group:possessed people,1,0,0,0,1,true
+銭婆,group:workers,2,0,0,0,1,true
+銭婆,group:those present,1,0,0,0,1,true
+銭婆,group:No-Face and the babies,1,0,0,0,1,true
+リン,group:bathhouse workers,1,0,0,0,1,true
+一同,group:bathhouse residents,2,0,0,0,1,true
+湯婆婆,group:bathhouse residents,1,0,0,0,1,true
+坊,坊,1,0,0,0,1,true
+千尋,group:bathhouse residents,3,0,0,0,1,false
