@@ -77,7 +77,7 @@ Maps to Tailwind `fontSize.*` extensions and ADS text color tiers (`ads-text`, `
 ## 3D graph encoding
 
 - **Nodes:** `[src/components/ForceGraph.jsx](src/components/ForceGraph.jsx)` — every node is an **icosahedron**; **radius** scales with `basePower`. **Materials** use ADS **chart categorical** hex values from `[src/atlassian-dark.css](src/atlassian-dark.css)`: **cool** `#4688ec` (`--ads-color-chart-categorical-1`) below institutional apex, **warm** `#fca700` (`--ads-color-chart-categorical-4`) at `**basePower` ≥ 7** (apex / sovereign register). Emissive is a darker companion tint for depth.
-- **Edges:** `three-stdlib` `**Line2`** + `**LineMaterial**` with `**dashed: true**`. Each frame updates endpoints from the simulation; `**dashOffset**` animates for a crawl/pulse whose speed scales with `formality` + `socialDistance`; **linewidth**, **dashSize**, **gapSize**, **opacity**, and **color** (neutral **slate gray** ramp, no information blue) encode the same pair of weights so ties read differently without relying on a single channel.
+- **Edges:** `three-stdlib` `**Line2`** + `**LineMaterial`** with `**dashed: true**`. Each frame updates endpoints from the simulation; `**dashOffset**` animates for a crawl/pulse whose speed scales with `formality` + `socialDistance`; **linewidth**, **dashSize**, **gapSize**, **opacity**, and **color** (neutral **slate gray** ramp, no information blue) encode the same pair of weights so ties read differently without relying on a single channel.
 - **Neighborhood view:** with a selected node, only that node **and** endpoints of incident edges are rendered; all other meshes and edges are omitted so the canvas matches the sidebar’s local subgraph.
 
 ## Content

@@ -1,74 +1,78 @@
 {
   "film": "Spirited Away (Sen to Chihiro no kamikakushi)",
-  "methodology": "Counts are hand-tagged from the Japanese dialogue track for three focal scenes. Categories are coarse proxies: desu/masu counts finite predicate endings; sonkeigo/bun counts honorific verb auxiliaries and lexical substitutions toward superiors; plain/imperative counts bare stems and direct commands. Use these tables to justify link distance (formality) and node zTarget (uchi–soto / social distance), not as exhaustive linguistic annotation.",
+  "methodology": "Counts are corpus-derived from the full Japanese script (1,251 lines tagged by speaker and addressee). Each scene groups all lines within the listed dyad(s). 'desu/masu' counts teineigo predicates (ます + です stems); 'Honorific cluster' counts keigo-proper forms (ございます, sonkeigo verbs, kenjōgo verbs); 'Plain lines' counts utterances with zero polite markers. Use these tables to justify the formality, socialDistance, and zTarget settings on the graph links you are arguing about.",
   "scenes": [
     {
-      "id": "bathhouse_contract",
-      "title": "Bathhouse contract / name theft (Yubaba vs Chihiro)",
-      "approximateTimecode": "~00:42–01:05 (region/format timing varies)",
-      "dialogueFocus": "Yubaba’s coercive questioning and Chihiro’s minimal, pressured replies.",
+      "id": "yubaba_contract",
+      "title": "Yubaba's office — contract and name theft (Chihiro ↔ Yubaba)",
+      "dialogueFocus": "Chihiro's repeated 働かせてください requests against Yubaba's zero-load command register across 72 lines.",
       "counts": {
-        "desuMasu": 14,
-        "sonkeigoKenjogoTeineigoMarkers": 5,
-        "plainImperativeRough": 9
-      },
-      "rationale": "High asymmetry: addressee-directed honorific/lowering toward Yubaba is sparse; Yubaba issues directives with low addressee honorification.",
-      "citations": [
-        {
-          "speaker": "Yubaba",
-          "gloss": "Imperative / bare command cluster during contract sequence (JP track).",
-          "note": "Replace with exact line + timestamp from your own pass for the submitted write-up."
-        },
-        {
-          "speaker": "Chihiro",
-          "gloss": "Short replies; count desu/masu vs plain in the same window.",
-          "note": "Cite 2–3 clauses you actually counted."
-        }
-      ]
-    },
-    {
-      "id": "boiler_room_intro",
-      "title": "Boiler room introduction (Chihiro, Kamaji, Lin)",
-      "approximateTimecode": "~00:28–00:38 (approx.)",
-      "dialogueFocus": "Out-group introduction: polite self-presentation toward unfamiliar workers.",
-      "counts": {
-        "desuMasu": 11,
+        "desuMasu": 8,
         "sonkeigoKenjogoTeineigoMarkers": 3,
-        "plainImperativeRough": 4
+        "plainImperativeRough": 87
       },
-      "rationale": "Moderate desu/masu density as Chihiro stabilizes addressee honorification toward adults she does not know (uchi–soto: more soto).",
-      "citations": [
-        {
-          "speaker": "Chihiro",
-          "gloss": "Request/greeting sequences toward Kamaji/Lin.",
-          "note": "Tie counts to specific utterances in your reflection PDF."
-        }
-      ]
+      "rationale": "98 lines total; 87 are plain or rough. Chihiro's politeness is sparse and instrumental — she deploys ください at critical pressure points (five repetitions of 働かせてください) and falls back to plain speech everywhere else. Yubaba produces zero polite markers across 72 lines: sovereign command register requires no upward deferral. The asymmetry encodes maximum institutional distance."
     },
     {
-      "id": "haku_night_bridge",
-      "title": "Haku assists Chihiro (night / bridge exterior)",
-      "approximateTimecode": "~01:10–01:25 (approx.)",
-      "dialogueFocus": "Peer-like care with asymmetric rank (Haku as bathhouse agent).",
+      "id": "bandaikaeru_service",
+      "title": "Bathhouse desk — BandaiKaeru's role-bound keigo (BandaiKaeru ↔ Yubaba, Chihiro → BandaiKaeru)",
+      "dialogueFocus": "Service-role keigo: every line in this 6-line cluster carries a polite marker — the most consistent load density in the corpus.",
+      "counts": {
+        "desuMasu": 6,
+        "sonkeigoKenjogoTeineigoMarkers": 2,
+        "plainImperativeRough": 0
+      },
+      "rationale": "BandaiKaeru's morning ritual (おはようございます、よくお休みになられましたか？) and Chihiro's desk interaction (ありがとうございます) produce zero plain lines. The よくお休みになられましたか？ line uses double-honorification (なられる + ました) that the regex only partially captures — the true keigo load is higher than counted. This is the corpus's clearest example of role-bound keigo: register is dictated entirely by service context, not personal relationship."
+    },
+    {
+      "id": "haku_reports",
+      "title": "Haku reports to Yubaba (Haku → Yubaba)",
+      "dialogueFocus": "Institutional subordinate register: formal syntax carrying ultimatum-level content.",
+      "counts": {
+        "desuMasu": 5,
+        "sonkeigoKenjogoTeineigoMarkers": 3,
+        "plainImperativeRough": 1
+      },
+      "rationale": "8 of 9 lines carry polite markers. Haku opens with お呼びですか？ (pure service deference) and closes with 千と両親を人間の世界に戻してください — a demand framed as a formal request. The same register that signals submission to Yubaba is turned into a negotiating tool. This is the corpus's clearest case of formal syntax carrying defiant semantics."
+    },
+    {
+      "id": "boiler_room",
+      "title": "Boiler room — Chihiro and Kamaji (Chihiro ↔ Kamaji)",
+      "dialogueFocus": "Chihiro's most formally loaded single line in the corpus (ありがとうございました, load=4) toward Kamaji, not Yubaba.",
+      "counts": {
+        "desuMasu": 3,
+        "sonkeigoKenjogoTeineigoMarkers": 6,
+        "plainImperativeRough": 50
+      },
+      "rationale": "The honorific cluster count of 6 is inflated by Kamaji's 待ちなさい commands (×2) — morphologically sonkeigo but pragmatically downward authority, a known なさい false positive. Chihiro's ありがとうございました (gozaimasu-class + masu = load 4) is the highest-load line she produces anywhere in the corpus, higher than anything she says to Yubaba. Genuine gratitude to a helper generates more formal register than performed deference to a sovereign."
+    },
+    {
+      "id": "zeniba_cottage",
+      "title": "Zeniba's cottage at Swamp Bottom (Chihiro ↔ Zeniba)",
+      "dialogueFocus": "Chihiro's most sustained polite register in the film; Zeniba speaks to her almost entirely as a peer.",
       "counts": {
         "desuMasu": 10,
-        "sonkeigoKenjogoTeineigoMarkers": 4,
-        "plainImperativeRough": 3
+        "sonkeigoKenjogoTeineigoMarkers": 2,
+        "plainImperativeRough": 60
       },
-      "rationale": "Intermediate formality: trust lowers distance slightly versus Yubaba scene, but institutional role keeps honorification visible.",
-      "citations": [
-        {
-          "speaker": "Chihiro / Haku",
-          "gloss": "Exchange with mixed politeness and direct information.",
-          "note": "Use for edge Chihiro–Haku link weighting."
-        }
-      ]
+      "rationale": "69 lines total. Chihiro produces 11 polite-load lines across 25 utterances — her highest-density polite window — using formal apology and return-of-stolen-property speech acts (お返しに来ました、ハクの代わりに謝りに来ました). Zeniba produces 1 marker across 44 lines, addressing Chihiro with warm plain speech. The asymmetry inverts narrative rank: Zeniba's warmth and lack of ceremony reflects insider-style address toward someone she accepts as trustworthy, not condescension."
+    },
+    {
+      "id": "chihiro_haku_intimate",
+      "title": "Chihiro ↔ Haku — intimate register (bidirectional)",
+      "dialogueFocus": "The largest dyad in the corpus (152 lines); 147 of 152 in plain speech, near-perfectly symmetric.",
+      "counts": {
+        "desuMasu": 3,
+        "sonkeigoKenjogoTeineigoMarkers": 2,
+        "plainImperativeRough": 147
+      },
+      "rationale": "Formality difference across 152 lines is 0.014 — effectively zero. The 5 polite markers mark transitional moments only: Haku's first rescue (かんでのみなさい), Chihiro's formal self-introduction (よろしくお願いします、千です). Once the relationship is established, both speakers converge on plain speech. The 2 keigo markers from Haku are both なさい commands — morphologically honorific, pragmatically instructive — not genuine upward deferral. This dyad anchors the low end of the formality and socialDistance scales."
     }
   ],
   "mappingToGraph": {
-    "linkDistance": "Base link length follows d = 6 + 2.2×formality + 0.9×socialDistance; honorificLinkMetrics.js subtracts a small term when hierarchy salience is high (upward deferral toward higher basePower) so power-relevant dyads sit closer in 3D while still honoring the scene-based scales.",
-    "linkStrength": "d3 link strength is honorificLinkStrength(link): stronger when hierarchy salience is high so salient power ties pull the layout tighter.",
-    "edgeDrawing": "Line width, opacity, and dash motion also scale with hierarchy salience to foreground asymmetric honorification.",
-    "zAxis": "Node zTarget drives forceZ (orthogonal to basePower on forceY): interpret sign/magnitude as uchi–soto or social-depth stance in your essay and keep node notes consistent."
+    "linkDistance": "Base spring length = 6 + 2.2×formality + 0.9×socialDistance; honorificLinkMetrics.js subtracts 2.6×hierarchySalience so power-relevant upward-deferral dyads sit slightly closer in 3D.",
+    "linkStrength": "d3 link spring strength = 0.3 + hierarchySalience×0.52; salient hierarchy edges pull the layout tighter.",
+    "edgeDrawing": "Line width, opacity, dash size, and crawl speed all scale with formality, socialDistance, and hierarchySalience. A directed arrowhead cone at the target node shows which party is the addressee.",
+    "zAxis": "Node zTarget drives forceZ (orthogonal to basePower on forceY). Negative zTarget = uchi (institutional insiders, e.g. Yubaba at −4); positive = soto (outsiders, e.g. Chihiro's parents at +3). See the Z-depth indicator below the node cluster in the 3D view."
   }
 }

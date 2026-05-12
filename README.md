@@ -26,6 +26,20 @@ Open **http://localhost:5173** (or the URL Vite prints if the port is in use).
 
 The app runs without a `.env` file. To load **TMDB** cast photos when a character has no URL in `src/data/characterPortraitUrls.json`, copy the commented keys from [`.env.example`](.env.example) and add your read token or v3 API key.
 
+## Character portraits
+
+Portrait URLs live in `src/data/characterPortraitUrls.json` keyed by node `id`. Manually paste any image URL there to override the placeholder. For the 10 live-action course films the runtime fallback in `src/lib/tmdbCastPortraits.js` will also attempt a TMDB cast match at runtime for any node with no entry. Animated films (Spirited Away, Millennium Actress) are excluded from TMDB since it only carries voice-actor headshots rather than character art.
+
+To pre-fetch and bake TMDB URLs for all live-action films at once:
+
+```bash
+npm run fetch:portraits          # add missing entries, keep existing
+npm run fetch:portraits:force    # overwrite all entries
+npm run fetch:portraits:dry      # preview without writing
+```
+
+Requires `VITE_TMDB_READ_ACCESS_TOKEN` or `VITE_TMDB_API_KEY` in `.env`.
+
 ## npm scripts
 
 | Command | Purpose |
@@ -33,7 +47,9 @@ The app runs without a `.env` file. To load **TMDB** cast photos when a characte
 | `npm run dev` | Dev server with HMR |
 | `npm run build` | Production build → `dist/` |
 | `npm run preview` | Serve `dist/` locally |
-| `npm run clean:vite` | Remove `node_modules/.vite` if Vite serves stale optimized deps |
+| `npm run fetch:portraits` | Fetch TMDB portrait URLs for all live-action film nodes |
+| `npm run fetch:portraits:force` | Same, overwriting existing entries |
+| `npm run fetch:portraits:dry` | Preview matches without writing |
 
 ## Deploy
 

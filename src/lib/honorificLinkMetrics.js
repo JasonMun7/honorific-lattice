@@ -36,12 +36,8 @@ export function hierarchySalience(link) {
  * @returns {number}
  */
 export function honorificLinkDistance(link) {
-  const f = Number(link.formality) || 0;
   const sd = Number(link.socialDistance) || 1;
-  const hi = hierarchySalience(link);
-  const base = 6 + f * 2.2 + sd * 0.9;
-  const hierarchyPull = 2.6 * hi;
-  return Math.max(4.2, base - hierarchyPull);
+  return Math.max(4.2, 6 + sd * 2.5);
 }
 
 /**
